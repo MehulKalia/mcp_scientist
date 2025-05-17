@@ -1,0 +1,3 @@
+"""
+MCP Scientist API package
+""" 

@@ -1,0 +1,38 @@
+2025-05-17 15:42:09,107 - __main__ - INFO - Initializing FastAPI application...
+2025-05-17 15:42:09,108 - __main__ - INFO - CORS middleware configured
+2025-05-17 15:42:09,108 - __main__ - INFO - Global state initialized
+2025-05-17 15:42:09,137 - __main__ - INFO - Starting FastAPI server...
+2025-05-17 15:42:09,138 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-05-17 15:42:20,346 - __main__ - INFO - Received new chat request: task='Design a 50‑aa stapled α‑helix that binds MDM2' config={'maxIterations': 3}
+2025-05-17 15:42:20,347 - __main__ - INFO - Generated request ID: 38874bd6-abeb-41d6-88ac-78db5f00df59
+2025-05-17 15:42:20,347 - __main__ - DEBUG - Initializing new ProteinDesignAgent
+2025-05-17 15:42:20,347 - agent - INFO - Initializing ProteinDesignAgent
+2025-05-17 15:42:20,347 - agent - DEBUG - Session ID: 3dda2254-c744-4659-847d-c589ed09849f
+2025-05-17 15:42:20,347 - agent - DEBUG - AlphaFold MCP URL: http://localhost:8000
+2025-05-17 15:42:20,347 - agent - DEBUG - ESMFold MCP URL: None
+2025-05-17 15:42:20,347 - agent - INFO - ProteinDesignAgent initialized successfully
+2025-05-17 15:42:20,347 - __main__ - DEBUG - Setting agent configuration: {'maxIterations': 3}
+2025-05-17 15:42:20,347 - __main__ - INFO - Request stored successfully. Active agents: 1
+2025-05-17 15:42:20,355 - __main__ - INFO - New WebSocket connection request for request_id: 38874bd6-abeb-41d6-88ac-78db5f00df59
+2025-05-17 15:42:20,356 - __main__ - INFO - WebSocket connection accepted for request_id: 38874bd6-abeb-41d6-88ac-78db5f00df59
+2025-05-17 15:42:20,356 - __main__ - DEBUG - Active connections: 1
+2025-05-17 15:42:20,356 - __main__ - INFO - Processing request: Design a 50‑aa stapled α‑helix that binds MDM2
+2025-05-17 15:42:20,356 - __main__ - DEBUG - Using configuration: {'maxIterations': 3}
+2025-05-17 15:42:20,356 - agent - INFO - Starting protein design process
+2025-05-17 15:42:20,356 - agent - DEBUG - Configuration: {'maxIterations': 3}
+2025-05-17 15:42:20,356 - agent - INFO - Sending initial status update
+2025-05-17 15:42:20,356 - __main__ - DEBUG - Sending update for request_id: 38874bd6-abeb-41d6-88ac-78db5f00df59
+2025-05-17 15:42:20,356 - __main__ - DEBUG - Update content: {'content': 'Starting protein design process...', 'type': 'system'}
+2025-05-17 15:42:20,357 - agent - INFO - Starting iteration 1/3
+2025-05-17 15:42:20,357 - __main__ - DEBUG - Sending update for request_id: 38874bd6-abeb-41d6-88ac-78db5f00df59
+2025-05-17 15:42:20,357 - __main__ - DEBUG - Update content: {'content': 'STARTING ITERATION 1/3', 'type': 'iteration'}
+2025-05-17 15:42:20,357 - agent - INFO - Starting iteration 2/3
+2025-05-17 15:42:20,357 - __main__ - DEBUG - Sending update for request_id: 38874bd6-abeb-41d6-88ac-78db5f00df59
+2025-05-17 15:42:20,357 - __main__ - DEBUG - Update content: {'content': 'STARTING ITERATION 2/3', 'type': 'iteration'}
+2025-05-17 15:42:20,357 - agent - INFO - Starting iteration 3/3
+2025-05-17 15:42:20,358 - __main__ - DEBUG - Sending update for request_id: 38874bd6-abeb-41d6-88ac-78db5f00df59
+2025-05-17 15:42:20,358 - __main__ - DEBUG - Update content: {'content': 'STARTING ITERATION 3/3', 'type': 'iteration'}
+2025-05-17 15:42:20,358 - agent - INFO - Cleaning up process_request state
+2025-05-17 15:42:20,358 - __main__ - INFO - Cleaning up WebSocket connection for request_id: 38874bd6-abeb-41d6-88ac-78db5f00df59
+2025-05-17 15:42:20,358 - __main__ - INFO - Remaining active connections: 0
+2025-05-17 15:42:20,359 - __main__ - INFO - WebSocket connection closed for request_id: 38874bd6-abeb-41d6-88ac-78db5f00df59
