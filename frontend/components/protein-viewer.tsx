@@ -1,145 +1,209 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { RotateCcw, Pause, Play } from "lucide-react";
-import dynamic from "next/dynamic";
+import { forwardRef, useEffect, useRef, useState } from "react";
+import { Loader2, RotateCcw, Info, ZoomIn, ZoomOut } from "lucide-react";
+import * as NGL from "ngl";
+import { Button } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
+// Default PDB string for demonstration (a simple alpha helix)
+export const DEFAULT_PDB = `ATOM      1  N   ALA A   1      27.271  24.862   5.000  1.00 20.00
+ATOM      2  CA  ALA A   1      26.000  24.000   5.000  1.00 20.00
+ATOM      3  C   ALA A   1      25.000  24.000   6.000  1.00 20.00
+ATOM      4  O   ALA A   1      25.000  24.000   7.000  1.00 20.00
+ATOM      5  CB  ALA A   1      26.000  22.000   5.000  1.00 20.00
+ATOM      6  N   ALA A   2      24.000  24.000   6.000  1.00 20.00
+ATOM      7  CA  ALA A   2      23.000  24.000   7.000  1.00 20.00
+ATOM      8  C   ALA A   2      22.000  24.000   8.000  1.00 20.00
+ATOM      9  O   ALA A   2      21.000  24.000   9.000  1.00 20.00
+ATOM     10  CB  ALA A   2      23.000  22.000   7.000  1.00 20.00
+ATOM     11  N   ALA A   3      22.000  24.000   8.000  1.00 20.00
+ATOM     12  CA  ALA A   3      21.000  24.000   9.000  1.00 20.00
+ATOM     13  C   ALA A   3      20.000  24.000  10.000  1.00 20.00
+ATOM     14  O   ALA A   3      19.000  24.000  11.000  1.00 20.00
+ATOM     15  CB  ALA A   3      21.000  22.000   9.000  1.00 20.00
+CONECT    1    2
+CONECT    2    3
+CONECT    3    4
+CONECT    2    5
+CONECT    6    7
+CONECT    7    8
+CONECT    8    9
+CONECT    7   10
+CONECT   11   12
+CONECT   12   13
+CONECT   13   14
+CONECT   12   15
+END`;
+
+export interface ProteinViewerApi {
+  autoView: () => void;
+  viewerControls: {
+    zoom: (delta: number) => void;
+  };
+  changeRepresentation: (style: string) => void;
+}
+
+export type NglStage = NGL.Stage;
 
 interface ProteinViewerProps {
-  pdbUrl?: string;
   pdbContent?: string;
+  onLoad?: () => void;
 }
 
-export default function ProteinViewer({
-  pdbUrl,
-  pdbContent,
-}: ProteinViewerProps) {
-  console.log("ProteinViewer render - props:", { pdbUrl, pdbContent });
+const ProteinViewer = forwardRef<ProteinViewerApi, ProteinViewerProps>(
+  ({ pdbContent = DEFAULT_PDB, onLoad }, ref) => {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const stageRef = useRef<NGL.Stage | null>(null);
+    const [isLoading, setIsLoading] = useState(true);
 
-  const [rotating, setRotating] = useState(true);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const stageRef = useRef<any>(null);
-
-  useEffect(() => {
-    console.log("ProteinViewer useEffect - initializing NGL");
-    const container = containerRef.current;
-    if (!container) {
-      console.log("Container ref is null, skipping initialization");
-      return;
-    }
-
-    // Dynamically import NGL
-    import("ngl")
-      .then((NGL) => {
-        console.log("NGL imported successfully");
-
-        // Initialize NGL Stage
-        const stage = new NGL.Stage(container, {
-          backgroundColor: "white",
-          quality: "medium",
-        });
-        console.log("NGL Stage created");
-
-        // Store stage reference
-        stageRef.current = stage;
-
-        // Load PDB file
-        if (pdbUrl) {
-          console.log("Loading PDB from URL:", pdbUrl);
-          stage.loadFile(pdbUrl, { defaultRepresentation: true });
-        } else if (pdbContent) {
-          console.log("Loading PDB from content");
-          stage.loadFile(new Blob([pdbContent], { type: "text/plain" }), {
-            ext: "pdb",
-            defaultRepresentation: true,
-          });
-        } else {
-          console.log("No PDB provided, loading default protein");
-          stage.loadFile("rcsb://1crn", { defaultRepresentation: true });
-        }
-
-        // Set up auto-rotation
-        stage.autoView();
-        console.log("Stage setup complete");
-
-        return () => {
-          console.log("Cleaning up NGL Stage");
-          stage.dispose();
+    // Expose methods via ref
+    useEffect(() => {
+      if (ref && stageRef.current) {
+        (ref as React.MutableRefObject<ProteinViewerApi>).current = {
+          autoView: () => stageRef.current?.autoView(),
+          viewerControls: {
+            zoom: (delta: number) =>
+              stageRef.current?.viewerControls.zoom(delta),
+          },
+          changeRepresentation: (style: string) => {
+            const components =
+              stageRef.current?.getComponentsByName("structure");
+            if (components) {
+              components.forEach((component) => {
+                component.removeAllRepresentations();
+                component.addRepresentation(style, {
+                  color: "chainid",
+                  opacity: 0.8,
+                });
+              });
+            }
+          },
         };
-      })
-      .catch((error) => {
-        console.error("Error loading NGL:", error);
+      }
+    }, [ref]);
+
+    // Effect to initialize NGL Stage on mount
+    useEffect(() => {
+      console.log("ProteinViewer: Initializing NGL Stage...");
+      if (!containerRef.current) {
+        console.log(
+          "ProteinViewer: Container ref not available. Cannot initialize stage."
+        );
+        return;
+      }
+
+      console.log("ProteinViewer: Container dimensions on init:", {
+        width: containerRef.current.clientWidth,
+        height: containerRef.current.clientHeight,
       });
-  }, [pdbUrl, pdbContent]);
 
-  useEffect(() => {
-    console.log("Rotation effect - rotating:", rotating);
-    if (!stageRef.current) {
-      console.log("No stage reference available");
-      return;
-    }
+      // Initialize NGL Stage
+      console.log(
+        "ProteinViewer: Container ref available. Creating NGL stage."
+      );
+      const stage = new NGL.Stage(containerRef.current, {
+        backgroundColor: "white",
+        quality: "medium",
+      });
+      stageRef.current = stage;
+      stage.handleResize();
 
-    // Handle rotation state
-    if (rotating) {
-      console.log("Enabling auto-rotation");
-      stageRef.current.autoView();
-    }
-  }, [rotating]);
+      console.log("ProteinViewer: NGL Stage initialized", stage);
 
-  const handleReset = () => {
-    console.log("Reset view clicked");
-    if (stageRef.current) {
-      stageRef.current.autoView();
-    }
-  };
+      return () => {
+        console.log("ProteinViewer: Disposing NGL Stage");
+        stage.dispose();
+      };
+    }, []); // Empty dependency array means this runs once on mount
 
-  return (
-    <div className="flex h-full flex-col">
-      <div className="border-b border-neutral-200 p-4">
-        <h2 className="text-xl font-light text-neutral-800">
-          Protein Structure
-        </h2>
-      </div>
+    // Effect to load PDB content when it changes or stage is ready
+    useEffect(() => {
+      console.log("ProteinViewer: pdbContent effect triggered.", {
+        pdbContent,
+      });
+      const contentToLoad = pdbContent ?? DEFAULT_PDB; // Ensure content is available
 
-      <div className="relative flex-1">
-        <div className="absolute right-4 top-4 z-10 flex gap-2">
-          <button
-            onClick={() => {
-              console.log("Rotation toggle clicked");
-              setRotating(!rotating);
-            }}
-            className="rounded-full bg-white p-2 text-neutral-600 shadow-sm hover:bg-neutral-50"
-            title={rotating ? "Pause rotation" : "Start rotation"}
-          >
-            {rotating ? (
-              <Pause className="h-4 w-4" />
-            ) : (
-              <Play className="h-4 w-4" />
-            )}
-          </button>
-          <button
-            onClick={handleReset}
-            className="rounded-full bg-white p-2 text-neutral-600 shadow-sm hover:bg-neutral-50"
-            title="Reset view"
-          >
-            <RotateCcw className="h-4 w-4" />
-          </button>
-        </div>
+      if (!stageRef.current || !contentToLoad) {
+        console.log("ProteinViewer: Stage not ready or no content to load.");
+        return;
+      }
 
-        <div ref={containerRef} className="h-full w-full" />
+      console.log("ProteinViewer: Container dimensions before loading:", {
+        width: containerRef.current?.clientWidth,
+        height: containerRef.current?.clientHeight,
+      });
 
-        <div className="absolute bottom-4 left-4 right-4 rounded-lg bg-white p-3 shadow-sm">
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className="font-medium text-neutral-800">
-                Protein Visualization
-              </h3>
-              <p className="text-xs text-neutral-500">
-                Drag to rotate • Scroll to zoom
-              </p>
+      setIsLoading(true);
+      console.log("ProteinViewer: Loading structure into stage...");
+      const stage = stageRef.current;
+
+      // Clear existing components
+      stage.removeAllComponents();
+
+      // Load new structure
+      stage
+        // Load the content from a Blob to ensure it's treated as data
+        .loadFile(new Blob([contentToLoad], { type: "text/plain" }), {
+          ext: "pdb",
+        })
+        .then((component) => {
+          console.log(
+            "ProteinViewer: Structure loaded successfully.",
+            component
+          );
+          // Cast the component to StructureComponent and add representation immediately
+          const structureComponent = component as NGL.StructureComponent;
+          if (!structureComponent) {
+            console.log(
+              "ProteinViewer: Loaded component is not a StructureComponent."
+            );
+            return;
+          }
+
+          console.log("ProteinViewer: Adding cartoon representation");
+          structureComponent.addRepresentation("cartoon", {
+            color: "chainid", // Using chainid again for consistency
+            opacity: 0.8,
+          });
+
+          // Center and zoom to the new structure
+          setTimeout(() => {
+            stage.autoView();
+            console.log("ProteinViewer: autoView called after delay.");
+          }, 100);
+
+          setIsLoading(false);
+          onLoad?.();
+        })
+        .catch((error: any) => {
+          console.error("ProteinViewer: Error loading structure:", error);
+          setIsLoading(false);
+        });
+    }, [pdbContent, onLoad]); // Dependencies reverted
+
+    return (
+      <div className="relative w-full h-full">
+        {isLoading && (
+          <div className="absolute inset-0 flex items-center justify-center bg-white/80 z-10">
+            <div className="flex flex-col items-center space-y-2">
+              <Loader2 className="h-8 w-8 animate-spin text-primary" />
+              <span className="text-sm text-muted-foreground">
+                Loading structure...
+              </span>
             </div>
           </div>
-        </div>
+        )}
+
+        <div ref={containerRef} className="w-full h-full" />
       </div>
-    </div>
-  );
-}
+    );
+  }
+);
+
+export default ProteinViewer;
