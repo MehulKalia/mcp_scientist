@@ -1,0 +1,680 @@
+{
+  "q-bio/0411035v1": {
+    "title": "Length, Protein-Protein Interactions, and Complexity",
+    "authors": [
+      "Taison Tan",
+      "Daan Frenkel",
+      "Vishal Gupta",
+      "Michael W. Deem"
+    ],
+    "summary": "The evolutionary reason for the increase in gene length from archaea to\nprokaryotes to eukaryotes observed in large scale genome sequencing efforts has\nbeen unclear. We propose here that the increasing complexity of protein-protein\ninteractions has driven the selection of longer proteins, as longer proteins\nare more able to distinguish among a larger number of distinct interactions due\nto their greater average surface area. Annotated protein sequences available\nfrom the SWISS-PROT database were analyzed for thirteen eukaryotes, eight\nbacteria, and two archaea species. The number of subcellular locations to which\neach protein is associated is used as a measure of the number of interactions\nto which a protein participates. Two databases of yeast protein-protein\ninteractions were used as another measure of the number of interactions to\nwhich each \\emph{S. cerevisiae} protein participates. Protein length is shown\nto correlate with both number of subcellular locations to which a protein is\nassociated and number of interactions as measured by yeast two-hybrid\nexperiments. Protein length is also shown to correlate with the probability\nthat the protein is encoded by an essential gene. Interestingly, average\nprotein length and number of subcellular locations are not significantly\ndifferent between all human proteins and protein targets of known, marketed\ndrugs. Increased protein length appears to be a significant mechanism by which\nthe increasing complexity of protein-protein interaction networks is\naccommodated within the natural evolution of species. Consideration of protein\nlength may be a valuable tool in drug design, one that predicts different\nstrategies for inhibiting interactions in aberrant and normal pathways.",
+    "pdf_url": "http://arxiv.org/pdf/q-bio/0411035v1",
+    "published": "2004-11-16",
+    "pdf_path": null
+  },
+  "q-bio/0601026v1": {
+    "title": "Knowledge-based energy functions for computational studies of proteins",
+    "authors": [
+      "Xiang Li",
+      "Jie Liang"
+    ],
+    "summary": "This chapter discusses theoretical framework and methods for developing\nknowledge-based potential functions essential for protein structure prediction,\nprotein-protein interaction, and protein sequence design. We discuss in some\ndetails about the Miyazawa-Jernigan contact statistical potential,\ndistance-dependent statistical potentials, as well as geometric statistical\npotentials. We also describe a geometric model for developing both linear and\nnon-linear potential functions by optimization. Applications of knowledge-based\npotential functions in protein-decoy discrimination, in protein-protein\ninteractions, and in protein design are then described. Several issues of\nknowledge-based potential functions are finally discussed.",
+    "pdf_url": "http://arxiv.org/pdf/q-bio/0601026v1",
+    "published": "2006-01-19",
+    "pdf_path": null
+  },
+  "2504.16479v1": {
+    "title": "The Dance of Atoms-De Novo Protein Design with Diffusion Model",
+    "authors": [
+      "Yujie Qin",
+      "Ming He",
+      "Changyong Yu",
+      "Ming Ni",
+      "Xian Liu",
+      "Xiaochen Bo"
+    ],
+    "summary": "The de novo design of proteins refers to creating proteins with specific\nstructures and functions that do not naturally exist. In recent years, the\naccumulation of high-quality protein structure and sequence data and\ntechnological advancements have paved the way for the successful application of\ngenerative artificial intelligence (AI) models in protein design. These models\nhave surpassed traditional approaches that rely on fragments and\nbioinformatics. They have significantly enhanced the success rate of de novo\nprotein design, and reduced experimental costs, leading to breakthroughs in the\nfield. Among various generative AI models, diffusion models have yielded the\nmost promising results in protein design. In the past two to three years, more\nthan ten protein design models based on diffusion models have emerged. Among\nthem, the representative model, RFDiffusion, has demonstrated success rates in\n25 protein design tasks that far exceed those of traditional methods, and other\nAI-based approaches like RFjoint and hallucination. This review will\nsystematically examine the application of diffusion models in generating\nprotein backbones and sequences. We will explore the strengths and limitations\nof different models, summarize successful cases of protein design using\ndiffusion models, and discuss future development directions.",
+    "pdf_url": "http://arxiv.org/pdf/2504.16479v1",
+    "published": "2025-04-23",
+    "pdf_path": "papers/protein_design/2504.16479v1.pdf"
+  },
+  "2404.16866v4": {
+    "title": "Annotation-guided Protein Design with Multi-Level Domain Alignment",
+    "authors": [
+      "Chaohao Yuan",
+      "Songyou Li",
+      "Geyan Ye",
+      "Yikun Zhang",
+      "Long-Kai Huang",
+      "Wenbing Huang",
+      "Wei Liu",
+      "Jianhua Yao",
+      "Yu Rong"
+    ],
+    "summary": "The core challenge of de novo protein design lies in creating proteins with\nspecific functions or properties, guided by certain conditions. Current models\nexplore to generate protein using structural and evolutionary guidance, which\nonly provide indirect conditions concerning functions and properties. However,\ntextual annotations of proteins, especially the annotations for protein\ndomains, which directly describe the protein's high-level functionalities,\nproperties, and their correlation with target amino acid sequences, remain\nunexplored in the context of protein design tasks. In this paper, we propose\nProtein-Annotation Alignment Generation, PAAG, a multi-modality protein design\nframework that integrates the textual annotations extracted from protein\ndatabase for controllable generation in sequence space. Specifically, within a\nmulti-level alignment module, PAAG can explicitly generate proteins containing\nspecific domains conditioned on the corresponding domain annotations, and can\neven design novel proteins with flexible combinations of different kinds of\nannotations. Our experimental results underscore the superiority of the aligned\nprotein representations from PAAG over 7 prediction tasks. Furthermore, PAAG\ndemonstrates a significant increase in generation success rate (24.7% vs 4.7%\nin zinc finger, and 54.3% vs 22.0% in the immunoglobulin domain) in comparison\nto the existing model. We anticipate that PAAG will broaden the horizons of\nprotein design by leveraging the knowledge from between textual annotation and\nproteins.",
+    "pdf_url": "http://arxiv.org/pdf/2404.16866v4",
+    "published": "2024-04-18",
+    "pdf_path": "papers/protein_design/2404.16866v4.pdf"
+  },
+  "2504.10983v1": {
+    "title": "ProtFlow: Fast Protein Sequence Design via Flow Matching on Compressed Protein Language Model Embeddings",
+    "authors": [
+      "Zitai Kong",
+      "Yiheng Zhu",
+      "Yinlong Xu",
+      "Hanjing Zhou",
+      "Mingzhe Yin",
+      "Jialu Wu",
+      "Hongxia Xu",
+      "Chang-Yu Hsieh",
+      "Tingjun Hou",
+      "Jian Wu"
+    ],
+    "summary": "The design of protein sequences with desired functionalities is a fundamental\ntask in protein engineering. Deep generative methods, such as autoregressive\nmodels and diffusion models, have greatly accelerated the discovery of novel\nprotein sequences. However, these methods mainly focus on local or shallow\nresidual semantics and suffer from low inference efficiency, large modeling\nspace and high training cost. To address these challenges, we introduce\nProtFlow, a fast flow matching-based protein sequence design framework that\noperates on embeddings derived from semantically meaningful latent space of\nprotein language models. By compressing and smoothing the latent space,\nProtFlow enhances performance while training on limited computational\nresources. Leveraging reflow techniques, ProtFlow enables high-quality\nsingle-step sequence generation. Additionally, we develop a joint design\npipeline for the design scene of multichain proteins. We evaluate ProtFlow\nacross diverse protein design tasks, including general peptides and long-chain\nproteins, antimicrobial peptides, and antibodies. Experimental results\ndemonstrate that ProtFlow outperforms task-specific methods in these\napplications, underscoring its potential and broad applicability in\ncomputational protein sequence design and analysis.",
+    "pdf_url": "http://arxiv.org/pdf/2504.10983v1",
+    "published": "2025-04-15",
+    "pdf_path": "papers/protein_design/2504.10983v1.pdf"
+  },
+  "1806.11369v2": {
+    "title": "Develop machine learning based predictive models for engineering protein solubility",
+    "authors": [
+      "X. Han",
+      "X. Wang",
+      "K. Zhou"
+    ],
+    "summary": "Protein activity is a significant characteristic for recombinant proteins\nwhich can be used as biocatalysts. High activity of proteins reduces the cost\nof biocatalysts. A model that can predict protein activity from amino acid\nsequence is highly desired, as it aids experimental improvement of proteins.\nHowever, only limited data for protein activity are currently available, which\nprevents the development of such models. Since protein activity and solubility\nare correlated for some proteins, the publicly available solubility dataset may\nbe adopted to develop models that can predict protein solubility from sequence.\nThe models could serve as a tool to indirectly predict protein activity from\nsequence. In literature, predicting protein solubility from sequence has been\nintensively explored, but the predicted solubility represented in binary values\nfrom all the developed models was not suitable for guiding experimental designs\nto improve protein solubility. Here we propose new machine learning models for\nimproving protein solubility in vivo. We first implemented a novel approach\nthat predicted protein solubility in continuous numerical values instead of\nbinary ones. After combing it with various machine learning algorithms, we\nachieved a prediction accuracy of 76.28 percent when Support Vector Machine\nalgorithm was used. Continuous values of solubility are more meaningful in\nprotein engineering, as they enable researchers to choose proteins with higher\npredicted solubility for experimental validation, while binary values fail to\ndistinguish proteins with the same value. There are only two possible values so\nmany proteins have the same one.",
+    "pdf_url": "http://arxiv.org/pdf/1806.11369v2",
+    "published": "2018-06-29",
+    "pdf_path": "papers/protein_design/1806.11369v2.pdf"
+  },
+  "2109.13754v1": {
+    "title": "Deep Generative Modeling for Protein Design",
+    "authors": [
+      "Alexey Strokach",
+      "Philip M. Kim"
+    ],
+    "summary": "Deep learning approaches have produced substantial breakthroughs in fields\nsuch as image classification and natural language processing and are making\nrapid inroads in the area of protein design. Many generative models of proteins\nhave been developed that encompass all known protein sequences, model specific\nprotein families, or extrapolate the dynamics of individual proteins. Those\ngenerative models can learn protein representations that are often more\ninformative of protein structure and function than hand-engineered features.\nFurthermore, they can be used to quickly propose millions of novel proteins\nthat resemble the native counterparts in terms of expression level, stability,\nor other attributes. The protein design process can further be guided by\ndiscriminative oracles to select candidates with the highest probability of\nhaving the desired properties. In this review, we discuss five classes of\ngenerative models that have been most successful at modeling proteins and\nprovide a framework for model guided protein design.",
+    "pdf_url": "http://arxiv.org/pdf/2109.13754v1",
+    "published": "2021-08-31",
+    "pdf_path": "papers/protein_design/2109.13754v1.pdf"
+  },
+  "2505.01277v1": {
+    "title": "Scoring-Assisted Generative Exploration for Proteins (SAGE-Prot): A Framework for Multi-Objective Protein Optimization via Iterative Sequence Generation and Evaluation",
+    "authors": [
+      "Hocheol Lim",
+      "Geon-Ho Lee",
+      "Kyoung Tai No"
+    ],
+    "summary": "Proteins play essential roles in nature, from catalyzing biochemical\nreactions to binding specific targets. Advances in protein engineering have the\npotential to revolutionize biotechnology and healthcare by designing proteins\nwith tailored properties. Machine learning and generative models have\ntransformed protein design by enabling the exploration of vast\nsequence-function landscapes. Here, we introduce Scoring-Assisted Generative\nExploration for Proteins (SAGE-Prot), a framework that iteratively combines\nautoregressive protein generation with quantitative structure-property\nrelationship models for fine-tuned optimization. By integrating diverse protein\ndescriptors, SAGE-Prot enhances key properties, including binding affinity,\nthermal stability, enzymatic activity, and solubility. We demonstrate its\neffectiveness by optimizing GB1 for binding affinity and thermal stability and\nTEM-1 for enzymatic activity and solubility. Leveraging curriculum learning,\nSAGE-Prot adapts rapidly to increasingly complex design objectives, building on\npast successes. Experimental validation demonstrated that SAGE-Prot-generated\nproteins substantially outperformed their wild-type counterparts, achieving up\nto a 17-fold increase in beta-lactamase activity, underscoring SAGE-Prot's\npotential to tackle critical challenges in protein engineering. As generative\nmodels continue to evolve, approaches like SAGE-Prot will be indispensable for\nadvancing rational protein design.",
+    "pdf_url": "http://arxiv.org/pdf/2505.01277v1",
+    "published": "2025-05-02",
+    "pdf_path": "papers/protein_design/2505.01277v1.pdf"
+  },
+  "2405.01983v1": {
+    "title": "Model-based reinforcement learning for protein backbone design",
+    "authors": [
+      "Frederic Renard",
+      "Cyprien Courtot",
+      "Alfredo Reichlin",
+      "Oliver Bent"
+    ],
+    "summary": "Designing protein nanomaterials of predefined shape and characteristics has\nthe potential to dramatically impact the medical industry. Machine learning\n(ML) has proven successful in protein design, reducing the need for expensive\nwet lab experiment rounds. However, challenges persist in efficiently exploring\nthe protein fitness landscapes to identify optimal protein designs. In\nresponse, we propose the use of AlphaZero to generate protein backbones,\nmeeting shape and structural scoring requirements. We extend an existing Monte\nCarlo tree search (MCTS) framework by incorporating a novel threshold-based\nreward and secondary objectives to improve design precision. This innovation\nconsiderably outperforms existing approaches, leading to protein backbones that\nbetter respect structural scores. The application of AlphaZero is novel in the\ncontext of protein backbone design and demonstrates promising performance.\nAlphaZero consistently surpasses baseline MCTS by more than 100% in top-down\nprotein design tasks. Additionally, our application of AlphaZero with secondary\nobjectives uncovers further promising outcomes, indicating the potential of\nmodel-based reinforcement learning (RL) in navigating the intricate and nuanced\naspects of protein design",
+    "pdf_url": "http://arxiv.org/pdf/2405.01983v1",
+    "published": "2024-05-03",
+    "pdf_path": "papers/protein_design/2405.01983v1.pdf"
+  },
+  "q-bio/0407040v1": {
+    "title": "Developing optimal nonlinear scoring function for protein design",
+    "authors": [
+      "Changyu Hu",
+      "Xiang Li",
+      "Jie Liang"
+    ],
+    "summary": "Motivation. Protein design aims to identify sequences compatible with a given\nprotein fold but incompatible to any alternative folds. To select the correct\nsequences and to guide the search process, a design scoring function is\ncritically important. Such a scoring function should be able to characterize\nthe global fitness landscape of many proteins simultaneously.\n  Results. To find optimal design scoring functions, we introduce two geometric\nviews and propose a formulation using mixture of nonlinear Gaussian kernel\nfunctions. We aim to solve a simplified protein sequence design problem. Our\ngoal is to distinguish each native sequence for a major portion of\nrepresentative protein structures from a large number of alternative decoy\nsequences, each a fragment from proteins of different fold. Our scoring\nfunction discriminate perfectly a set of 440 native proteins from 14 million\nsequence decoys. We show that no linear scoring function can succeed in this\ntask. In a blind test of unrelated proteins, our scoring function misclassfies\nonly 13 native proteins out of 194. This compares favorably with about 3-4\ntimes more misclassifications when optimal linear functions reported in\nliterature are used. We also discuss how to develop protein folding scoring\nfunction.",
+    "pdf_url": "http://arxiv.org/pdf/q-bio/0407040v1",
+    "published": "2004-07-29",
+    "pdf_path": null
+  },
+  "2412.04069v1": {
+    "title": "ProtDAT: A Unified Framework for Protein Sequence Design from Any Protein Text Description",
+    "authors": [
+      "Xiao-Yu Guo",
+      "Yi-Fan Li",
+      "Yuan Liu",
+      "Xiaoyong Pan",
+      "Hong-Bin Shen"
+    ],
+    "summary": "Protein design has become a critical method in advancing significant\npotential for various applications such as drug development and enzyme\nengineering. However, protein design methods utilizing large language models\nwith solely pretraining and fine-tuning struggle to capture relationships in\nmulti-modal protein data. To address this, we propose ProtDAT, a de novo\nfine-grained framework capable of designing proteins from any descriptive\nprotein text input. ProtDAT builds upon the inherent characteristics of protein\ndata to unify sequences and text as a cohesive whole rather than separate\nentities. It leverages an innovative multi-modal cross-attention, integrating\nprotein sequences and textual information for a foundational level and seamless\nintegration. Experimental results demonstrate that ProtDAT achieves the\nstate-of-the-art performance in protein sequence generation, excelling in\nrationality, functionality, structural similarity, and validity. On 20,000\ntext-sequence pairs from Swiss-Prot, it improves pLDDT by 6%, TM-score by 0.26,\nand reduces RMSD by 1.2 {\\AA}, highlighting its potential to advance protein\ndesign.",
+    "pdf_url": "http://arxiv.org/pdf/2412.04069v1",
+    "published": "2024-12-05",
+    "pdf_path": "papers/protein_design/2412.04069v1.pdf"
+  },
+  "2503.21123v1": {
+    "title": "De Novo Functional Protein Sequence Generation: Overcoming Data Scarcity through Regeneration and Large Models",
+    "authors": [
+      "Chenyu Ren",
+      "Daihai He",
+      "Jian Huang"
+    ],
+    "summary": "Proteins are essential components of all living organisms and play a critical\nrole in cellular survival. They have a broad range of applications, from\nclinical treatments to material engineering. This versatility has spurred the\ndevelopment of protein design, with amino acid sequence design being a crucial\nstep in the process. Recent advancements in deep generative models have shown\npromise for protein sequence design. However, the scarcity of functional\nprotein sequence data for certain types can hinder the training of these\nmodels, which often require large datasets. To address this challenge, we\npropose a hierarchical model named ProteinRG that can generate functional\nprotein sequences using relatively small datasets. ProteinRG begins by\ngenerating a representation of a protein sequence, leveraging existing large\nprotein sequence models, before producing a functional protein sequence. We\nhave tested our model on various functional protein sequences and evaluated the\nresults from three perspectives: multiple sequence alignment, t-SNE\ndistribution analysis, and 3D structure prediction. The findings indicate that\nour generated protein sequences maintain both similarity to the original\nsequences and consistency with the desired functions. Moreover, our model\ndemonstrates superior performance compared to other generative models for\nprotein sequence generation.",
+    "pdf_url": "http://arxiv.org/pdf/2503.21123v1",
+    "published": "2025-03-27",
+    "pdf_path": "papers/protein_design/2503.21123v1.pdf"
+  },
+  "1903.00458v1": {
+    "title": "How to Hallucinate Functional Proteins",
+    "authors": [
+      "Zak Costello",
+      "Hector Garcia Martin"
+    ],
+    "summary": "Here we present a novel approach to protein design and phenotypic inference\nusing a generative model for protein sequences. BioSeqVAE, a variational\nautoencoder variant, can hallucinate syntactically valid protein sequences that\nare likely to fold and function. BioSeqVAE is trained on the entire known\nprotein sequence space and learns to generate valid examples of protein\nsequences in an unsupervised manner. The model is validated by showing that its\nlatent feature space is useful and that it accurately reconstructs sequences.\nIts usefulness is demonstrated with a selection of relevant downstream design\ntasks. This work is intended to serve as a computational first step towards a\ngeneral purpose structure free protein design tool.",
+    "pdf_url": "http://arxiv.org/pdf/1903.00458v1",
+    "published": "2019-03-01",
+    "pdf_path": "papers/protein_design/1903.00458v1.pdf"
+  },
+  "2303.16452v1": {
+    "title": "ProtFIM: Fill-in-Middle Protein Sequence Design via Protein Language Models",
+    "authors": [
+      "Youhan Lee",
+      "Hasun Yu"
+    ],
+    "summary": "Protein language models (pLMs), pre-trained via causal language modeling on\nprotein sequences, have been a promising tool for protein sequence design. In\nreal-world protein engineering, there are many cases where the amino acids in\nthe middle of a protein sequence are optimized while maintaining other\nresidues. Unfortunately, because of the left-to-right nature of pLMs, existing\npLMs modify suffix residues by prompting prefix residues, which are\ninsufficient for the infilling task that considers the whole surrounding\ncontext. To find the more effective pLMs for protein engineering, we design a\nnew benchmark, Secondary structureE InFilling rEcoveRy, SEIFER, which\napproximates infilling sequence design scenarios. With the evaluation of\nexisting models on the benchmark, we reveal the weakness of existing language\nmodels and show that language models trained via fill-in-middle transformation,\ncalled ProtFIM, are more appropriate for protein engineering. Also, we prove\nthat ProtFIM generates protein sequences with decent protein representations\nthrough exhaustive experiments and visualizations.",
+    "pdf_url": "http://arxiv.org/pdf/2303.16452v1",
+    "published": "2023-03-29",
+    "pdf_path": "papers/protein_design/2303.16452v1.pdf"
+  },
+  "2310.10605v3": {
+    "title": "ForceGen: End-to-end de novo protein generation based on nonlinear mechanical unfolding responses using a protein language diffusion model",
+    "authors": [
+      "Bo Ni",
+      "David L. Kaplan",
+      "Markus J. Buehler"
+    ],
+    "summary": "Through evolution, nature has presented a set of remarkable protein\nmaterials, including elastins, silks, keratins and collagens with superior\nmechanical performances that play crucial roles in mechanobiology. However,\ngoing beyond natural designs to discover proteins that meet specified\nmechanical properties remains challenging. Here we report a generative model\nthat predicts protein designs to meet complex nonlinear mechanical\nproperty-design objectives. Our model leverages deep knowledge on protein\nsequences from a pre-trained protein language model and maps mechanical\nunfolding responses to create novel proteins. Via full-atom molecular\nsimulations for direct validation, we demonstrate that the designed proteins\nare novel, and fulfill the targeted mechanical properties, including unfolding\nenergy and mechanical strength, as well as the detailed unfolding\nforce-separation curves. Our model offers rapid pathways to explore the\nenormous mechanobiological protein sequence space unconstrained by biological\nsynthesis, using mechanical features as target to enable the discovery of\nprotein materials with superior mechanical properties.",
+    "pdf_url": "http://arxiv.org/pdf/2310.10605v3",
+    "published": "2023-10-16",
+    "pdf_path": "papers/protein_design/2310.10605v3.pdf"
+  },
+  "2412.18275v2": {
+    "title": "Learning to engineer protein flexibility",
+    "authors": [
+      "Petr Kouba",
+      "Joan Planas-Iglesias",
+      "Jiri Damborsky",
+      "Jiri Sedlar",
+      "Stanislav Mazurenko",
+      "Josef Sivic"
+    ],
+    "summary": "Generative machine learning models are increasingly being used to design\nnovel proteins for therapeutic and biotechnological applications. However, the\ncurrent methods mostly focus on the design of proteins with a fixed backbone\nstructure, which leads to their limited ability to account for protein\nflexibility, one of the crucial properties for protein function. Learning to\nengineer protein flexibility is problematic because the available data are\nscarce, heterogeneous, and costly to obtain using computational as well as\nexperimental methods. Our contributions to address this problem are three-fold.\nFirst, we comprehensively compare methods for quantifying protein flexibility\nand identify data relevant to learning. Second, we design and train flexibility\npredictors utilizing sequential or both sequential and structural information\non the input. We overcome the data scarcity issue by leveraging a pre-trained\nprotein language model. Third, we introduce a method for fine-tuning a protein\ninverse folding model to steer it toward desired flexibility in specified\nregions. We demonstrate that our method Flexpert-Design enables guidance of\ninverse folding models toward increased flexibility. This opens up new\npossibilities for protein flexibility engineering and the development of\nproteins with enhanced biological activities.",
+    "pdf_url": "http://arxiv.org/pdf/2412.18275v2",
+    "published": "2024-12-24",
+    "pdf_path": "papers/protein_design/2412.18275v2.pdf"
+  },
+  "2301.12485v3": {
+    "title": "Generating Novel, Designable, and Diverse Protein Structures by Equivariantly Diffusing Oriented Residue Clouds",
+    "authors": [
+      "Yeqing Lin",
+      "Mohammed AlQuraishi"
+    ],
+    "summary": "Proteins power a vast array of functional processes in living cells. The\ncapability to create new proteins with designed structures and functions would\nthus enable the engineering of cellular behavior and development of\nprotein-based therapeutics and materials. Structure-based protein design aims\nto find structures that are designable (can be realized by a protein sequence),\nnovel (have dissimilar geometry from natural proteins), and diverse (span a\nwide range of geometries). While advances in protein structure prediction have\nmade it possible to predict structures of novel protein sequences, the\ncombinatorially large space of sequences and structures limits the practicality\nof search-based methods. Generative models provide a compelling alternative, by\nimplicitly learning the low-dimensional structure of complex data\ndistributions. Here, we leverage recent advances in denoising diffusion\nprobabilistic models and equivariant neural networks to develop Genie, a\ngenerative model of protein structures that performs discrete-time diffusion\nusing a cloud of oriented reference frames in 3D space. Through in silico\nevaluations, we demonstrate that Genie generates protein backbones that are\nmore designable, novel, and diverse than existing models. This indicates that\nGenie is capturing key aspects of the distribution of protein structure space\nand facilitates protein design with high success rates. Code for generating new\nproteins and training new versions of Genie is available at\nhttps://github.com/aqlaboratory/genie.",
+    "pdf_url": "http://arxiv.org/pdf/2301.12485v3",
+    "published": "2023-01-29",
+    "pdf_path": "papers/protein_design/2301.12485v3.pdf"
+  },
+  "2212.07702v1": {
+    "title": "Protein Structure Prediction until CASP15",
+    "authors": [
+      "Arne Elofsson"
+    ],
+    "summary": "In Dec 2020, the results of AlphaFold2 were presented at CASP14, sparking a\nrevolution in the field of protein structure predictions. For the first time, a\npurely computational method could challenge experimental accuracy for structure\nprediction of single protein domains. The code of AlphaFold2 was released in\nthe summer of 2021, and since then, it has been shown that it can be used to\naccurately predict the structure of most (ordered) proteins and many\nprotein-protein interactions. It has also sparked an explosion of development\nin the field, improving AI-based methods to predict protein complexes,\ndisordered regions, and protein design. Here I will review some of the\ninventions sparked by the release of AlphaFold.",
+    "pdf_url": "http://arxiv.org/pdf/2212.07702v1",
+    "published": "2022-12-15",
+    "pdf_path": "papers/protein_design/2212.07702v1.pdf"
+  },
+  "2307.14587v1": {
+    "title": "Artificial intelligence-aided protein engineering: from topological data analysis to deep protein language models",
+    "authors": [
+      "Yuchi Qiu",
+      "Guo-Wei Wei"
+    ],
+    "summary": "Protein engineering is an emerging field in biotechnology that has the\npotential to revolutionize various areas, such as antibody design, drug\ndiscovery, food security, ecology, and more. However, the mutational space\ninvolved is too vast to be handled through experimental means alone. Leveraging\naccumulative protein databases, machine learning (ML) models, particularly\nthose based on natural language processing (NLP), have considerably expedited\nprotein engineering. Moreover, advances in topological data analysis (TDA) and\nartificial intelligence-based protein structure prediction, such as AlphaFold2,\nhave made more powerful structure-based ML-assisted protein engineering\nstrategies possible. This review aims to offer a comprehensive, systematic, and\nindispensable set of methodological components, including TDA and NLP, for\nprotein engineering and to facilitate their future development.",
+    "pdf_url": "http://arxiv.org/pdf/2307.14587v1",
+    "published": "2023-07-27",
+    "pdf_path": "papers/protein_design/2307.14587v1.pdf"
+  },
+  "2505.08041v1": {
+    "title": "Protein FID: Improved Evaluation of Protein Structure Generative Models",
+    "authors": [
+      "Felix Faltings",
+      "Hannes Stark",
+      "Tommi Jaakkola",
+      "Regina Barzilay"
+    ],
+    "summary": "Protein structure generative models have seen a recent surge of interest, but\nmeaningfully evaluating them computationally is an active area of research.\nWhile current metrics have driven useful progress, they do not capture how well\nmodels sample the design space represented by the training data. We argue for a\nprotein Frechet Inception Distance (FID) metric to supplement current\nevaluations with a measure of distributional similarity in a semantically\nmeaningful latent space. Our FID behaves desirably under protein structure\nperturbations and correctly recapitulates similarities between protein samples:\nit correlates with optimal transport distances and recovers FoldSeek clusters\nand the CATH hierarchy. Evaluating current protein structure generative models\nwith FID shows that they fall short of modeling the distribution of PDB\nproteins.",
+    "pdf_url": "http://arxiv.org/pdf/2505.08041v1",
+    "published": "2025-05-12",
+    "pdf_path": "papers/protein_design/2505.08041v1.pdf"
+  },
+  "2102.03881v1": {
+    "title": "Mimetic Neural Networks: A unified framework for Protein Design and Folding",
+    "authors": [
+      "Moshe Eliasof",
+      "Tue Boesen",
+      "Eldad Haber",
+      "Chen Keasar",
+      "Eran Treister"
+    ],
+    "summary": "Recent advancements in machine learning techniques for protein folding\nmotivate better results in its inverse problem -- protein design. In this work\nwe introduce a new graph mimetic neural network, MimNet, and show that it is\npossible to build a reversible architecture that solves the structure and\ndesign problems in tandem, allowing to improve protein design when the\nstructure is better estimated. We use the ProteinNet data set and show that the\nstate of the art results in protein design can be improved, given recent\narchitectures for protein folding.",
+    "pdf_url": "http://arxiv.org/pdf/2102.03881v1",
+    "published": "2021-02-07",
+    "pdf_path": "papers/protein_design/2102.03881v1.pdf"
+  },
+  "2310.02546v1": {
+    "title": "Joint Design of Protein Sequence and Structure based on Motifs",
+    "authors": [
+      "Zhenqiao Song",
+      "Yunlong Zhao",
+      "Yufei Song",
+      "Wenxian Shi",
+      "Yang Yang",
+      "Lei Li"
+    ],
+    "summary": "Designing novel proteins with desired functions is crucial in biology and\nchemistry. However, most existing work focus on protein sequence design,\nleaving protein sequence and structure co-design underexplored. In this paper,\nwe propose GeoPro, a method to design protein backbone structure and sequence\njointly. Our motivation is that protein sequence and its backbone structure\nconstrain each other, and thus joint design of both can not only avoid\nnonfolding and misfolding but also produce more diverse candidates with desired\nfunctions. To this end, GeoPro is powered by an equivariant encoder for\nthree-dimensional (3D) backbone structure and a protein sequence decoder guided\nby 3D geometry. Experimental results on two biologically significant\nmetalloprotein datasets, including $\\beta$-lactamases and myoglobins, show that\nour proposed GeoPro outperforms several strong baselines on most metrics.\nRemarkably, our method discovers novel $\\beta$-lactamases and myoglobins which\nare not present in protein data bank (PDB) and UniProt. These proteins exhibit\nstable folding and active site environments reminiscent of those of natural\nproteins, demonstrating their excellent potential to be biologically\nfunctional.",
+    "pdf_url": "http://arxiv.org/pdf/2310.02546v1",
+    "published": "2023-10-04",
+    "pdf_path": "papers/protein_design/2310.02546v1.pdf"
+  },
+  "2208.14526v1": {
+    "title": "Designing novel protein structures using sequence generator and AlphaFold2",
+    "authors": [
+      "Xeerak Agha",
+      "Nihang Fu",
+      "Jianjun Hu"
+    ],
+    "summary": "Protein structures and functions are determined by a contiguous arrangement\nof amino acid sequences. Designing novel protein sequences and structures with\ndesired geometry and functions is a complex task with large state spaces. Here\nwe develop a novel protein design pipeline consisting of two deep learning\nalgorithms, ProteinSolver and AlphaFold2. ProteinSolver is a deep graph neural\nnetwork that generates amino acid sequences such that the forces between\ninteracting amino acids are favorable and compatible with the fold while\nAlphaFold2 is a deep learning algorithm that predicts the protein structures\nfrom protein sequences. We present forty de novo designed binding sites of the\nPTP1B and P53 proteins with high precision, out of which thirty proteins are\nnovel. Using ProteinSolver and AlphaFold2 in conjunction, we can trim the\nexploration of the large protein conformation space, thus expanding the ability\nto find novel and diverse de novo protein designs.",
+    "pdf_url": "http://arxiv.org/pdf/2208.14526v1",
+    "published": "2022-08-30",
+    "pdf_path": "papers/protein_design/2208.14526v1.pdf"
+  },
+  "2502.10173v1": {
+    "title": "Agentic End-to-End De Novo Protein Design for Tailored Dynamics Using a Language Diffusion Model",
+    "authors": [
+      "Bo Ni",
+      "Markus J. Buehler"
+    ],
+    "summary": "Proteins are dynamic molecular machines whose biological functions, spanning\nenzymatic catalysis, signal transduction, and structural adaptation, are\nintrinsically linked to their motions. Designing proteins with targeted dynamic\nproperties, however, remains a challenge due to the complex, degenerate\nrelationships between sequence, structure, and molecular motion. Here, we\nintroduce VibeGen, a generative AI framework that enables end-to-end de novo\nprotein design conditioned on normal mode vibrations. VibeGen employs an\nagentic dual-model architecture, comprising a protein designer that generates\nsequence candidates based on specified vibrational modes and a protein\npredictor that evaluates their dynamic accuracy. This approach synergizes\ndiversity, accuracy, and novelty during the design process. Via full-atom\nmolecular simulations as direct validation, we demonstrate that the designed\nproteins accurately reproduce the prescribed normal mode amplitudes across the\nbackbone while adopting various stable, functionally relevant structures.\nNotably, generated sequences are de novo, exhibiting no significant similarity\nto natural proteins, thereby expanding the accessible protein space beyond\nevolutionary constraints. Our work integrates protein dynamics into generative\nprotein design, and establishes a direct, bidirectional link between sequence\nand vibrational behavior, unlocking new pathways for engineering biomolecules\nwith tailored dynamical and functional properties. This framework holds broad\nimplications for the rational design of flexible enzymes, dynamic scaffolds,\nand biomaterials, paving the way toward dynamics-informed AI-driven protein\nengineering.",
+    "pdf_url": "http://arxiv.org/pdf/2502.10173v1",
+    "published": "2025-02-14",
+    "pdf_path": "papers/protein_design/2502.10173v1.pdf"
+  },
+  "2502.17504v2": {
+    "title": "Protein Large Language Models: A Comprehensive Survey",
+    "authors": [
+      "Yijia Xiao",
+      "Wanjia Zhao",
+      "Junkai Zhang",
+      "Yiqiao Jin",
+      "Han Zhang",
+      "Zhicheng Ren",
+      "Renliang Sun",
+      "Haixin Wang",
+      "Guancheng Wan",
+      "Pan Lu",
+      "Xiao Luo",
+      "Yu Zhang",
+      "James Zou",
+      "Yizhou Sun",
+      "Wei Wang"
+    ],
+    "summary": "Protein-specific large language models (Protein LLMs) are revolutionizing\nprotein science by enabling more efficient protein structure prediction,\nfunction annotation, and design. While existing surveys focus on specific\naspects or applications, this work provides the first comprehensive overview of\nProtein LLMs, covering their architectures, training datasets, evaluation\nmetrics, and diverse applications. Through a systematic analysis of over 100\narticles, we propose a structured taxonomy of state-of-the-art Protein LLMs,\nanalyze how they leverage large-scale protein sequence data for improved\naccuracy, and explore their potential in advancing protein engineering and\nbiomedical research. Additionally, we discuss key challenges and future\ndirections, positioning Protein LLMs as essential tools for scientific\ndiscovery in protein science. Resources are maintained at\nhttps://github.com/Yijia-Xiao/Protein-LLM-Survey.",
+    "pdf_url": "http://arxiv.org/pdf/2502.17504v2",
+    "published": "2025-02-21",
+    "pdf_path": "papers/protein_design/2502.17504v2.pdf"
+  },
+  "1809.06632v1": {
+    "title": "Modular decomposition of protein structure using community detection",
+    "authors": [
+      "William P. Grant",
+      "Sebastian E. Ahnert"
+    ],
+    "summary": "As the number of solved protein structures increases, the opportunities for\nmeta-analysis of this dataset increase too. Protein structures are known to be\nformed of domains; structural and functional subunits that are often repeated\nacross sets of proteins. These domains generally form compact, globular\nregions, and are therefore often easily identifiable by inspection, yet the\nproblem of automatically fragmenting the protein into these compact\nsubstructures remains computationally challenging. Existing domain\nclassification methods focus on finding subregions of protein structure that\nare conserved, rather than finding a decomposition which spans the full protein\nstructure. However, such a decomposition would find ready application in\ncoarse-graining molecular dynamics, analysing the protein's topology, in de\nnovo protein design and in fitting electron microscopy maps. Here, we present a\ntool for performing this modular decomposition using the Infomap community\ndetection algorithm. The protein structure is abstracted into a network in\nwhich its amino acids are the nodes, and where the edges are generated using a\nsimple proximity test. Infomap can then be used to identify highly\nintra-connected regions of the protein. We perform this decomposition\nsystematically across 4000 distinct protein structures, taken from the Protein\nData Bank. The decomposition obtained correlates well with existing PFAM\nsequence classifications, but has the advantage of spanning the full protein,\nwith the potential for novel domains. The coarse-grained network formed by the\ncommunities can also be used as a proxy for protein topology at the\nsingle-chain level; we demonstrate that grouping these proteins by their\ncoarse-grained network results in a functionally significant classification.",
+    "pdf_url": "http://arxiv.org/pdf/1809.06632v1",
+    "published": "2018-09-18",
+    "pdf_path": "papers/protein_design/1809.06632v1.pdf"
+  },
+  "2411.08909v3": {
+    "title": "Long-context Protein Language Modeling Using Bidirectional Mamba with Shared Projection Layers",
+    "authors": [
+      "Yingheng Wang",
+      "Zichen Wang",
+      "Gil Sadeh",
+      "Luca Zancato",
+      "Alessandro Achille",
+      "George Karypis",
+      "Huzefa Rangwala"
+    ],
+    "summary": "Self-supervised training of language models (LMs) has seen great success for\nprotein sequences in learning meaningful representations and for generative\ndrug design. Most protein LMs are based on the Transformer architecture trained\non individual proteins with short context lengths. Such protein LMs cannot\nextrapolate to longer proteins and protein complexes well. They also fail to\naccount for the underlying biological mechanisms carried out by biomolecular\ninteractions and dynamics i.e., proteins often interact with other proteins,\nmolecules, and pathways in complex biological systems. In this work, we propose\nLC-PLM based on an alternative protein LM architecture, BiMamba-S, built upon\nselective structured state-space models, to learn high-quality universal\nprotein representations at the amino acid token level using masked language\nmodeling. We also introduce its graph-contextual variant, LC-PLM, which\ncontextualizes protein-protein interaction (PPI) graphs for a second stage of\ntraining. LC-PLM demonstrates favorable neural scaling laws, better length\nextrapolation capability, and up to 30% and 16% improvements on protein\ndownstream tasks compared to Transformer-based ESM-2 when trained with 100B and\n1T tokens, respectively. LC-PLM-G further trained within the context of PPI\ngraphs shows promising results on protein structure and function prediction\ntasks. Our study demonstrates the benefit of increasing the context size with\ncomputationally efficient LM architecture (e.g., structured state space models)\nin learning universal protein representations and incorporating molecular\ninteraction contexts contained in biological graphs.",
+    "pdf_url": "http://arxiv.org/pdf/2411.08909v3",
+    "published": "2024-10-29",
+    "pdf_path": "papers/protein_design/2411.08909v3.pdf"
+  },
+  "2204.10673v2": {
+    "title": "Generative De Novo Protein Design with Global Context",
+    "authors": [
+      "Cheng Tan",
+      "Zhangyang Gao",
+      "Jun Xia",
+      "Bozhen Hu",
+      "Stan Z. Li"
+    ],
+    "summary": "The linear sequence of amino acids determines protein structure and function.\nProtein design, known as the inverse of protein structure prediction, aims to\nobtain a novel protein sequence that will fold into the defined structure.\nRecent works on computational protein design have studied designing sequences\nfor the desired backbone structure with local positional information and\nachieved competitive performance. However, similar local environments in\ndifferent backbone structures may result in different amino acids, indicating\nthat protein structure's global context matters. Thus, we propose the\nGlobal-Context Aware generative de novo protein design method (GCA), consisting\nof local and global modules. While local modules focus on relationships between\nneighbor amino acids, global modules explicitly capture non-local contexts.\nExperimental results demonstrate that the proposed GCA method outperforms\nstate-of-the-arts on de novo protein design. Our code and pretrained model will\nbe released.",
+    "pdf_url": "http://arxiv.org/pdf/2204.10673v2",
+    "published": "2022-04-21",
+    "pdf_path": "papers/protein_design/2204.10673v2.pdf"
+  },
+  "2504.13075v1": {
+    "title": "An All-Atom Generative Model for Designing Protein Complexes",
+    "authors": [
+      "Ruizhe Chen",
+      "Dongyu Xue",
+      "Xiangxin Zhou",
+      "Zaixiang Zheng",
+      "Xiangxiang Zeng",
+      "Quanquan Gu"
+    ],
+    "summary": "Proteins typically exist in complexes, interacting with other proteins or\nbiomolecules to perform their specific biological roles. Research on\nsingle-chain protein modeling has been extensively and deeply explored, with\nadvancements seen in models like the series of ESM and AlphaFold. Despite these\ndevelopments, the study and modeling of multi-chain proteins remain largely\nuncharted, though they are vital for understanding biological functions.\nRecognizing the importance of these interactions, we introduce APM (All-Atom\nProtein Generative Model), a model specifically designed for modeling\nmulti-chain proteins. By integrating atom-level information and leveraging data\non multi-chain proteins, APM is capable of precisely modeling inter-chain\ninteractions and designing protein complexes with binding capabilities from\nscratch. It also performs folding and inverse-folding tasks for multi-chain\nproteins. Moreover, APM demonstrates versatility in downstream applications: it\nachieves enhanced performance through supervised fine-tuning (SFT) while also\nsupporting zero-shot sampling in certain tasks, achieving state-of-the-art\nresults. Code will be released at https://github.com/bytedance/apm.",
+    "pdf_url": "http://arxiv.org/pdf/2504.13075v1",
+    "published": "2025-04-17",
+    "pdf_path": "papers/protein_design/2504.13075v1.pdf"
+  },
+  "2405.06693v2": {
+    "title": "SurfPro: Functional Protein Design Based on Continuous Surface",
+    "authors": [
+      "Zhenqiao Song",
+      "Tinglin Huang",
+      "Lei Li",
+      "Wengong Jin"
+    ],
+    "summary": "How can we design proteins with desired functions? We are motivated by a\nchemical intuition that both geometric structure and biochemical properties are\ncritical to a protein's function. In this paper, we propose SurfPro, a new\nmethod to generate functional proteins given a desired surface and its\nassociated biochemical properties. SurfPro comprises a hierarchical encoder\nthat progressively models the geometric shape and biochemical features of a\nprotein surface, and an autoregressive decoder to produce an amino acid\nsequence. We evaluate SurfPro on a standard inverse folding benchmark CATH 4.2\nand two functional protein design tasks: protein binder design and enzyme\ndesign. Our SurfPro consistently surpasses previous state-of-the-art inverse\nfolding methods, achieving a recovery rate of 57.78% on CATH 4.2 and higher\nsuccess rates in terms of protein-protein binding and enzyme-substrate\ninteraction scores.",
+    "pdf_url": "http://arxiv.org/pdf/2405.06693v2",
+    "published": "2024-05-07",
+    "pdf_path": "papers/protein_design/2405.06693v2.pdf"
+  },
+  "2410.16735v1": {
+    "title": "MeMDLM: De Novo Membrane Protein Design with Masked Discrete Diffusion Protein Language Models",
+    "authors": [
+      "Shrey Goel",
+      "Vishrut Thoutam",
+      "Edgar Mariano Marroquin",
+      "Aaron Gokaslan",
+      "Arash Firouzbakht",
+      "Sophia Vincoff",
+      "Volodymyr Kuleshov",
+      "Huong T. Kratochvil",
+      "Pranam Chatterjee"
+    ],
+    "summary": "Masked Diffusion Language Models (MDLMs) have recently emerged as a strong\nclass of generative models, paralleling state-of-the-art (SOTA) autoregressive\n(AR) performance across natural language modeling domains. While there have\nbeen advances in AR as well as both latent and discrete diffusion-based\napproaches for protein sequence design, masked diffusion language modeling with\nprotein language models (pLMs) is unexplored. In this work, we introduce\nMeMDLM, an MDLM tailored for membrane protein design, harnessing the SOTA pLM\nESM-2 to de novo generate realistic membrane proteins for downstream\nexperimental applications. Our evaluations demonstrate that MeMDLM-generated\nproteins exceed AR-based methods by generating sequences with greater\ntransmembrane (TM) character. We further apply our design framework to scaffold\nsoluble and TM motifs in sequences, demonstrating that MeMDLM-reconstructed\nsequences achieve greater biological similarity to their original counterparts\ncompared to SOTA inpainting methods. Finally, we show that MeMDLM captures\nphysicochemical membrane protein properties with similar fidelity as SOTA pLMs,\npaving the way for experimental applications. In total, our pipeline motivates\nfuture exploration of MDLM-based pLMs for protein design.",
+    "pdf_url": "http://arxiv.org/pdf/2410.16735v1",
+    "published": "2024-10-22",
+    "pdf_path": "papers/protein_design/2410.16735v1.pdf"
+  },
+  "2401.14819v1": {
+    "title": "Endowing Protein Language Models with Structural Knowledge",
+    "authors": [
+      "Dexiong Chen",
+      "Philip Hartout",
+      "Paolo Pellizzoni",
+      "Carlos Oliver",
+      "Karsten Borgwardt"
+    ],
+    "summary": "Understanding the relationships between protein sequence, structure and\nfunction is a long-standing biological challenge with manifold implications\nfrom drug design to our understanding of evolution. Recently, protein language\nmodels have emerged as the preferred method for this challenge, thanks to their\nability to harness large sequence databases. Yet, their reliance on expansive\nsequence data and parameter sets limits their flexibility and practicality in\nreal-world scenarios. Concurrently, the recent surge in computationally\npredicted protein structures unlocks new opportunities in protein\nrepresentation learning. While promising, the computational burden carried by\nsuch complex data still hinders widely-adopted practical applications. To\naddress these limitations, we introduce a novel framework that enhances protein\nlanguage models by integrating protein structural data. Drawing from recent\nadvances in graph transformers, our approach refines the self-attention\nmechanisms of pretrained language transformers by integrating structural\ninformation with structure extractor modules. This refined model, termed\nProtein Structure Transformer (PST), is further pretrained on a small protein\nstructure database, using the same masked language modeling objective as\ntraditional protein language models. Empirical evaluations of PST demonstrate\nits superior parameter efficiency relative to protein language models, despite\nbeing pretrained on a dataset comprising only 542K structures. Notably, PST\nconsistently outperforms the state-of-the-art foundation model for protein\nsequences, ESM-2, setting a new benchmark in protein function prediction. Our\nfindings underscore the potential of integrating structural information into\nprotein language models, paving the way for more effective and efficient\nprotein modeling Code and pretrained models are available at\nhttps://github.com/BorgwardtLab/PST.",
+    "pdf_url": "http://arxiv.org/pdf/2401.14819v1",
+    "published": "2024-01-26",
+    "pdf_path": "papers/protein_design/2401.14819v1.pdf"
+  },
+  "2402.16445v2": {
+    "title": "ProLLaMA: A Protein Language Model for Multi-Task Protein Language Processing",
+    "authors": [
+      "Liuzhenghao Lv",
+      "Zongying Lin",
+      "Hao Li",
+      "Yuyang Liu",
+      "Jiaxi Cui",
+      "Calvin Yu-Chian Chen",
+      "Li Yuan",
+      "Yonghong Tian"
+    ],
+    "summary": "Large Language Models (LLMs) have achieved remarkable performance in multiple\nNatural Language Processing (NLP) tasks. Under the premise that protein\nsequences constitute the protein language, Protein Language Models(PLMs) have\nadvanced the field of protein engineering. However, as of now, unlike LLMs in\nNLP, PLMs cannot handle the protein understanding task and the protein\ngeneration task simultaneously in the Protein Language Processing (PLP) field.\nThis prompts us to delineate the inherent limitations in current PLMs: (i) the\nlack of natural language capabilities, (ii) insufficient instruction\nunderstanding, and (iii) high training resource demands. To address these\nchallenges, we introduce a training framework to transform any general LLM into\na PLM capable of handling multiple PLP tasks. To improve training efficiency,\nwe propose Protein Vocabulary Pruning (PVP) for general LLMs. We construct a\nmulti-task instruction dataset containing 13 million samples with superfamily\ninformation, facilitating better modeling of protein sequence-function\nlandscapes. Through these methods, we develop the ProLLaMA model, the first\nknown PLM to handle multiple PLP tasks simultaneously. Experiments show that\nProLLaMA achieves state-of-the-art results in the unconditional protein\nsequence generation task. In the controllable protein sequence generation task,\nProLLaMA can design novel proteins with desired functionalities. As for the\nprotein understanding task, ProLLaMA achieves a 62\\% exact match rate in\nsuperfamily prediction. Codes, model weights, and datasets are available at\n\\url{https://github.com/PKU-YuanGroup/ProLLaMA} and\n\\url{https://huggingface.co/GreatCaptainNemo}.",
+    "pdf_url": "http://arxiv.org/pdf/2402.16445v2",
+    "published": "2024-02-26",
+    "pdf_path": "papers/protein_design/2402.16445v2.pdf"
+  },
+  "2407.09274v1": {
+    "title": "Unifying Sequences, Structures, and Descriptions for Any-to-Any Protein Generation with the Large Multimodal Model HelixProtX",
+    "authors": [
+      "Zhiyuan Chen",
+      "Tianhao Chen",
+      "Chenggang Xie",
+      "Yang Xue",
+      "Xiaonan Zhang",
+      "Jingbo Zhou",
+      "Xiaomin Fang"
+    ],
+    "summary": "Proteins are fundamental components of biological systems and can be\nrepresented through various modalities, including sequences, structures, and\ntextual descriptions. Despite the advances in deep learning and scientific\nlarge language models (LLMs) for protein research, current methodologies\npredominantly focus on limited specialized tasks -- often predicting one\nprotein modality from another. These approaches restrict the understanding and\ngeneration of multimodal protein data. In contrast, large multimodal models\nhave demonstrated potential capabilities in generating any-to-any content like\ntext, images, and videos, thus enriching user interactions across various\ndomains. Integrating these multimodal model technologies into protein research\noffers significant promise by potentially transforming how proteins are\nstudied. To this end, we introduce HelixProtX, a system built upon the large\nmultimodal model, aiming to offer a comprehensive solution to protein research\nby supporting any-to-any protein modality generation. Unlike existing methods,\nit allows for the transformation of any input protein modality into any desired\nprotein modality. The experimental results affirm the advanced capabilities of\nHelixProtX, not only in generating functional descriptions from amino acid\nsequences but also in executing critical tasks such as designing protein\nsequences and structures from textual descriptions. Preliminary findings\nindicate that HelixProtX consistently achieves superior accuracy across a range\nof protein-related tasks, outperforming existing state-of-the-art models. By\nintegrating multimodal large models into protein research, HelixProtX opens new\navenues for understanding protein biology, thereby promising to accelerate\nscientific discovery.",
+    "pdf_url": "http://arxiv.org/pdf/2407.09274v1",
+    "published": "2024-07-12",
+    "pdf_path": "papers/protein_design/2407.09274v1.pdf"
+  },
+  "2406.05540v2": {
+    "title": "A Fine-tuning Dataset and Benchmark for Large Language Models for Protein Understanding",
+    "authors": [
+      "Yiqing Shen",
+      "Zan Chen",
+      "Michail Mamalakis",
+      "Luhan He",
+      "Haiyang Xia",
+      "Tianbin Li",
+      "Yanzhou Su",
+      "Junjun He",
+      "Yu Guang Wang"
+    ],
+    "summary": "The parallels between protein sequences and natural language in their\nsequential structures have inspired the application of large language models\n(LLMs) to protein understanding. Despite the success of LLMs in NLP, their\neffectiveness in comprehending protein sequences remains an open question,\nlargely due to the absence of datasets linking protein sequences to descriptive\ntext. Researchers have then attempted to adapt LLMs for protein understanding\nby integrating a protein sequence encoder with a pre-trained LLM. However, this\nadaptation raises a fundamental question: \"Can LLMs, originally designed for\nNLP, effectively comprehend protein sequences as a form of language?\" Current\ndatasets fall short in addressing this question due to the lack of a direct\ncorrelation between protein sequences and corresponding text descriptions,\nlimiting the ability to train and evaluate LLMs for protein understanding\neffectively. To bridge this gap, we introduce ProteinLMDataset, a dataset\nspecifically designed for further self-supervised pretraining and supervised\nfine-tuning (SFT) of LLMs to enhance their capability for protein sequence\ncomprehension. Specifically, ProteinLMDataset includes 17.46 billion tokens for\npretraining and 893,000 instructions for SFT. Additionally, we present\nProteinLMBench, the first benchmark dataset consisting of 944 manually verified\nmultiple-choice questions for assessing the protein understanding capabilities\nof LLMs. ProteinLMBench incorporates protein-related details and sequences in\nmultiple languages, establishing a new standard for evaluating LLMs' abilities\nin protein comprehension. The large language model InternLM2-7B, pretrained and\nfine-tuned on the ProteinLMDataset, outperforms GPT-4 on ProteinLMBench,\nachieving the highest accuracy score.",
+    "pdf_url": "http://arxiv.org/pdf/2406.05540v2",
+    "published": "2024-06-08",
+    "pdf_path": "papers/protein_design/2406.05540v2.pdf"
+  },
+  "1907.13371v1": {
+    "title": "Proteins: the physics of amorphous evolving matter",
+    "authors": [
+      "Jean-Pierre Eckmann",
+      "Jacques Rougemont",
+      "Tsvi Tlusty"
+    ],
+    "summary": "Proteins are a matter of dual nature. As a physical object, a protein\nmolecule is a folded chain of amino acids with multifarious biochemistry. But\nit is also an instantiation along an evolutionary trajectory determined by the\nfunction performed by the protein within a hierarchy of interwoven interaction\nnetworks of the cell, the organism and the population. A physical theory of\nproteins therefore needs to unify both aspects, the biophysical and the\nevolutionary. Specifically, it should provide a model of how the DNA gene is\nmapped into the functional phenotype of the protein.\n  We review several physical approaches to the protein problem, focusing on a\nmechanical framework which treats proteins as evolvable condensed matter:\nMutations introduce localized perturbations in the gene, which are translated\nto localized perturbations in the protein matter. A natural tool to examine how\nmutations shape the phenotype are Green's functions. They map the evolutionary\nlinkage among mutations in the gene (termed epistasis) to cooperative physical\ninteractions among the amino acids in the protein. We discuss how the\nmechanistic view can be applied to examine basic questions of protein evolution\nand design.",
+    "pdf_url": "http://arxiv.org/pdf/1907.13371v1",
+    "published": "2019-07-31",
+    "pdf_path": "papers/protein_design/1907.13371v1.pdf"
+  },
+  "1802.02852v2": {
+    "title": "mGPfusion: Predicting protein stability changes with Gaussian process kernel learning and data fusion",
+    "authors": [
+      "Emmi Jokinen",
+      "Markus Heinonen",
+      "Harri L\u00e4hdesm\u00e4ki"
+    ],
+    "summary": "Proteins are commonly used by biochemical industry for numerous processes.\nRefining these proteins' properties via mutations causes stability effects as\nwell. Accurate computational method to predict how mutations affect protein\nstability are necessary to facilitate efficient protein design. However,\naccuracy of predictive models is ultimately constrained by the limited\navailability of experimental data. We have developed mGPfusion, a novel\nGaussian process (GP) method for predicting protein's stability changes upon\nsingle and multiple mutations. This method complements the limited experimental\ndata with large amounts of molecular simulation data. We introduce a Bayesian\ndata fusion model that re-calibrates the experimental and in silico data\nsources and then learns a predictive GP model from the combined data. Our\nprotein-specific model requires experimental data only regarding the protein of\ninterest and performs well even with few experimental measurements. The\nmGPfusion models proteins by contact maps and infers the stability effects\ncaused by mutations with a mixture of graph kernels. Our results show that\nmGPfusion outperforms state-of-the-art methods in predicting protein stability\non a dataset of 15 different proteins and that incorporating molecular\nsimulation data improves the model learning and prediction accuracy.",
+    "pdf_url": "http://arxiv.org/pdf/1802.02852v2",
+    "published": "2018-02-08",
+    "pdf_path": "papers/protein_design/1802.02852v2.pdf"
+  },
+  "2105.03617v1": {
+    "title": "MEGADOCK-GUI: a GUI-based complete cross-docking tool for exploring protein-protein interactions",
+    "authors": [
+      "Masahito Ohue",
+      "Yutaka Akiyama"
+    ],
+    "summary": "Information on protein-protein interactions (PPIs) not only advances our\nunderstanding of molecular biology but also provides important clues for target\nselection in drug discovery and the design of PPI inhibitors. One of the\ntechniques used for computational prediction of PPIs is protein-protein docking\ncalculations, and a variety of software has been developed. However, a friendly\ninterface for users who are not sufficiently familiar with the command line\ninterface has not been developed so far. In this study, we have developed a\ngraphical user interface, MEGADOCK-GUI, which enables users to easily predict\nPPIs and protein complex structures. In addition to the original 3-D molecular\nviewer and input file preparation functions, MEGADOCK-GUI is software that can\nautomatically perform complete cross-docking of $M$ vs. $N$ proteins. With\nMEGADOCK-GUI, various applications related to the prediction of PPIs, such as\nensemble docking that handles multiple conformations of proteins and screening\nof binding partner proteins that bind to specific proteins, can now be easily\nperformed.",
+    "pdf_url": "http://arxiv.org/pdf/2105.03617v1",
+    "published": "2021-05-08",
+    "pdf_path": "papers/protein_design/2105.03617v1.pdf"
+  },
+  "2211.02936v1": {
+    "title": "Learning the shape of protein micro-environments with a holographic convolutional neural network",
+    "authors": [
+      "Michael N. Pun",
+      "Andrew Ivanov",
+      "Quinn Bellamy",
+      "Zachary Montague",
+      "Colin LaMont",
+      "Philip Bradley",
+      "Jakub Otwinowski",
+      "Armita Nourmohammad"
+    ],
+    "summary": "Proteins play a central role in biology from immune recognition to brain\nactivity. While major advances in machine learning have improved our ability to\npredict protein structure from sequence, determining protein function from\nstructure remains a major challenge. Here, we introduce Holographic\nConvolutional Neural Network (H-CNN) for proteins, which is a physically\nmotivated machine learning approach to model amino acid preferences in protein\nstructures. H-CNN reflects physical interactions in a protein structure and\nrecapitulates the functional information stored in evolutionary data. H-CNN\naccurately predicts the impact of mutations on protein function, including\nstability and binding of protein complexes. Our interpretable computational\nmodel for protein structure-function maps could guide design of novel proteins\nwith desired function.",
+    "pdf_url": "http://arxiv.org/pdf/2211.02936v1",
+    "published": "2022-11-05",
+    "pdf_path": "papers/protein_design/2211.02936v1.pdf"
+  },
+  "2308.09482v1": {
+    "title": "Atom-by-atom protein generation and beyond with language models",
+    "authors": [
+      "Daniel Flam-Shepherd",
+      "Kevin Zhu",
+      "Al\u00e1n Aspuru-Guzik"
+    ],
+    "summary": "Protein language models learn powerful representations directly from\nsequences of amino acids. However, they are constrained to generate proteins\nwith only the set of amino acids represented in their vocabulary. In contrast,\nchemical language models learn atom-level representations of smaller molecules\nthat include every atom, bond, and ring. In this work, we show that chemical\nlanguage models can learn atom-level representations of proteins enabling\nprotein generation unconstrained to the standard genetic code and far beyond\nit. In doing so, we show that language models can generate entire proteins atom\nby atom -- effectively learning the multiple hierarchical layers of molecular\ninformation that define proteins from their primary sequence to their\nsecondary, and tertiary structure. We demonstrate language models are able to\nexplore beyond protein space -- generating proteins with modified sidechains\nthat form unnatural amino acids. Even further, we find that language models can\nexplore chemical space and protein space simultaneously and generate novel\nexamples of protein-drug conjugates. The results demonstrate the potential for\nbiomolecular design at the atom level using language models.",
+    "pdf_url": "http://arxiv.org/pdf/2308.09482v1",
+    "published": "2023-08-16",
+    "pdf_path": "papers/protein_design/2308.09482v1.pdf"
+  },
+  "2403.00875v1": {
+    "title": "Enhancing Protein Predictive Models via Proteins Data Augmentation: A Benchmark and New Directions",
+    "authors": [
+      "Rui Sun",
+      "Lirong Wu",
+      "Haitao Lin",
+      "Yufei Huang",
+      "Stan Z. Li"
+    ],
+    "summary": "Augmentation is an effective alternative to utilize the small amount of\nlabeled protein data. However, most of the existing work focuses on design-ing\nnew architectures or pre-training tasks, and relatively little work has studied\ndata augmentation for proteins. This paper extends data augmentation techniques\npreviously used for images and texts to proteins and then benchmarks these\ntechniques on a variety of protein-related tasks, providing the first\ncomprehensive evaluation of protein augmentation. Furthermore, we propose two\nnovel semantic-level protein augmentation methods, namely Integrated Gradients\nSubstitution and Back Translation Substitution, which enable protein\nsemantic-aware augmentation through saliency detection and biological\nknowledge. Finally, we integrate extended and proposed augmentations into an\naugmentation pool and propose a simple but effective framework, namely\nAutomated Protein Augmentation (APA), which can adaptively select the most\nsuitable augmentation combinations for different tasks. Extensive experiments\nhave shown that APA enhances the performance of five protein related tasks by\nan average of 10.55% across three architectures compared to vanilla\nimplementations without augmentation, highlighting its potential to make a\ngreat impact on the field.",
+    "pdf_url": "http://arxiv.org/pdf/2403.00875v1",
+    "published": "2024-03-01",
+    "pdf_path": "papers/protein_design/2403.00875v1.pdf"
+  },
+  "2411.06029v1": {
+    "title": "Validation of an LLM-based Multi-Agent Framework for Protein Engineering in Dry Lab and Wet Lab",
+    "authors": [
+      "Zan Chen",
+      "Yungeng Liu",
+      "Yu Guang Wang",
+      "Yiqing Shen"
+    ],
+    "summary": "Recent advancements in Large Language Models (LLMs) have enhanced efficiency\nacross various domains, including protein engineering, where they offer\npromising opportunities for dry lab and wet lab experiment workflow automation.\nPrevious work, namely TourSynbio-Agent, integrates a protein-specialized\nmultimodal LLM (i.e. TourSynbio-7B) with domain-specific deep learning (DL)\nmodels to streamline both computational and experimental protein engineering\ntasks. While initial validation demonstrated TourSynbio-7B's fundamental\nprotein property understanding, the practical effectiveness of the complete\nTourSynbio-Agent framework in real-world applications remained unexplored. This\nstudy presents a comprehensive validation of TourSynbio-Agent through five\ndiverse case studies spanning both computational (dry lab) and experimental\n(wet lab) protein engineering. In three computational case studies, we evaluate\nthe TourSynbio-Agent's capabilities in mutation prediction, protein folding,\nand protein design. Additionally, two wet-lab validations demonstrate\nTourSynbio-Agent's practical utility: engineering P450 proteins with up to 70%\nimproved selectivity for steroid 19-hydroxylation, and developing reductases\nwith 3.7x enhanced catalytic efficiency for alcohol conversion. Our findings\nfrom the five case studies establish that TourSynbio-Agent can effectively\nautomate complex protein engineering workflows through an intuitive\nconversational interface, potentially accelerating scientific discovery in\nprotein engineering.",
+    "pdf_url": "http://arxiv.org/pdf/2411.06029v1",
+    "published": "2024-11-09",
+    "pdf_path": "papers/protein_design/2411.06029v1.pdf"
+  },
+  "2412.11229v1": {
+    "title": "Applications of Knot Theory for the Improvement of the AlphaFold Protein Database",
+    "authors": [
+      "Pranshu Jahagirdar"
+    ],
+    "summary": "AlphaFold, a groundbreaking protein prediction model, has revolutionized\nprotein structure prediction, populating the AlphaFold Protein Database (AFDB)\nwith millions of predicted structures. However, AlphaFold's accuracy in\npredicting proteins with intricate topologies, such as knots, remains a\nconcern. This study investigates AlphaFold's performance in predicting knotted\nproteins and explores potential solutions to enhance the AFDB's reliability.\nForty-five experimentally verified knotted protein structures from the KnotProt\ndatabase were compared to their AlphaFold-generated counterparts. Knot analysis\nwas performed using PyKnot, a PyMOL plugin, employing both Gauss codes and\nAlexander-Briggs knot notations. Results showed 95.6% accuracy in predicting\nthe general shape of knots using Alexander-Briggs notation. However, Gauss code\nanalysis revealed a 55.6% discrepancy, indicating AlphaFold's limitations in\naccurately representing the intricate orientation and directionality of knots.\nThis Applications of Knot Theory for the improvement of the AlphaFold Protein\nDatabase suggests potential inaccuracies in a significant portion of the AFDB's\nknotted protein structures. The study underscores the need for improved knot\nrepresentation in AlphaFold and proposes potential solutions, including\ntransitioning to a single-module design or removing incorrectly predicted\nstructures from the AFDB. These findings highlight the importance of continuous\nrefinement for AI-based protein structure prediction tools to ensure the\naccuracy and reliability of protein databases for research and drug\ndevelopment.",
+    "pdf_url": "http://arxiv.org/pdf/2412.11229v1",
+    "published": "2024-12-15",
+    "pdf_path": "papers/protein_design/2412.11229v1.pdf"
+  },
+  "2502.08772v2": {
+    "title": "Persistent Sheaf Laplacian Analysis of Protein Flexibility",
+    "authors": [
+      "Nicole Hayes",
+      "Xiaoqi Wei",
+      "Hongsong Feng",
+      "Ekaterina Merkurjev",
+      "Guo-Wei Wei"
+    ],
+    "summary": "Protein flexibility, measured by the B-factor or Debye-Waller factor, is\nessential for protein functions such as structural support, enzyme activity,\ncellular communication, and molecular transport. Theoretical analysis and\nprediction of protein flexibility are crucial for protein design, engineering,\nand drug discovery. In this work, we introduce the persistent sheaf Laplacian\n(PSL), an effective tool in topological data analysis, to model and analyze\nprotein flexibility. By representing the local topology and geometry of protein\natoms through the multiscale harmonic and non-harmonic spectra of PSLs, the\nproposed model effectively captures protein flexibility and provides accurate,\nrobust predictions of protein B-factors. Our PSL model demonstrates an increase\nin accuracy of 32% compared to the classical Gaussian network model (GNM) in\npredicting B-factors for a dataset of 364 proteins. Additionally, we construct\na blind machine learning prediction method utilizing global and local protein\nfeatures. Extensive computations and comparisons validate the effectiveness of\nthe proposed PSL model for B-factor predictions.",
+    "pdf_url": "http://arxiv.org/pdf/2502.08772v2",
+    "published": "2025-02-12",
+    "pdf_path": "papers/protein_design/2502.08772v2.pdf"
+  },
+  "2501.01477v1": {
+    "title": "A Survey of Deep Learning Methods in Protein Bioinformatics and its Impact on Protein Design",
+    "authors": [
+      "Weihang Dai"
+    ],
+    "summary": "Proteins are sequences of amino acids that serve as the basic building blocks\nof living organisms. Despite rapidly growing databases documenting structural\nand functional information for various protein sequences, our understanding of\nproteins remains limited because of the large possible sequence space and the\ncomplex inter- and intra-molecular forces. Deep learning, which is\ncharacterized by its ability to learn relevant features directly from large\ndatasets, has demonstrated remarkable performance in fields such as computer\nvision and natural language processing. It has also been increasingly applied\nin recent years to the data-rich domain of protein sequences with great\nsuccess, most notably with Alphafold2's breakout performance in the protein\nstructure prediction. The performance improvements achieved by deep learning\nunlocks new possibilities in the field of protein bioinformatics, including\nprotein design, one of the most difficult but useful tasks. In this paper, we\nbroadly categorize problems in protein bioinformatics into three main\ncategories: 1) structural prediction, 2) functional prediction, and 3) protein\ndesign, and review the progress achieved from using deep learning methodologies\nin each of them. We expand on the main challenges of the protein design problem\nand highlight how advances in structural and functional prediction have\ndirectly contributed to design tasks. Finally, we conclude by identifying\nimportant topics and future research directions.",
+    "pdf_url": "http://arxiv.org/pdf/2501.01477v1",
+    "published": "2025-01-02",
+    "pdf_path": "papers/protein_design/2501.01477v1.pdf"
+  },
+  "1806.09900v3": {
+    "title": "Design of metalloproteins and novel protein folds using variational autoencoders",
+    "authors": [
+      "Joe G Greener",
+      "Lewis Moffat",
+      "David T Jones"
+    ],
+    "summary": "The design of novel proteins has many applications but remains an attritional\nprocess with success in isolated cases. Meanwhile, deep learning technologies\nhave exploded in popularity in recent years and are increasingly applicable to\nbiology due to the rise in available data. We attempt to link protein design\nand deep learning by using variational autoencoders to generate protein\nsequences conditioned on desired properties. Potential copper and calcium\nbinding sites are added to non-metal binding proteins without human\nintervention and compared to a hidden Markov model. In another use case, a\ngrammar of protein structures is developed and used to produce sequences for a\nnovel protein topology. One candidate structure is found to be stable by\nmolecular dynamics simulation. The ability of our model to confine the vast\nsearch space of protein sequences and to scale easily has the potential to\nassist in a variety of protein design tasks.",
+    "pdf_url": "http://arxiv.org/pdf/1806.09900v3",
+    "published": "2018-06-26",
+    "pdf_path": "papers/protein_design/1806.09900v3.pdf"
+  },
+  "2502.07671v2": {
+    "title": "Steering Protein Family Design through Profile Bayesian Flow",
+    "authors": [
+      "Jingjing Gong",
+      "Yu Pei",
+      "Siyu Long",
+      "Yuxuan Song",
+      "Zhe Zhang",
+      "Wenhao Huang",
+      "Ziyao Cao",
+      "Shuyi Zhang",
+      "Hao Zhou",
+      "Wei-Ying Ma"
+    ],
+    "summary": "Protein family design emerges as a promising alternative by combining the\nadvantages of de novo protein design and mutation-based directed evolution.In\nthis paper, we propose ProfileBFN, the Profile Bayesian Flow Networks, for\nspecifically generative modeling of protein families. ProfileBFN extends the\ndiscrete Bayesian Flow Network from an MSA profile perspective, which can be\ntrained on single protein sequences by regarding it as a degenerate profile,\nthereby achieving efficient protein family design by avoiding large-scale MSA\ndata construction and training. Empirical results show that ProfileBFN has a\nprofound understanding of proteins. When generating diverse and novel family\nproteins, it can accurately capture the structural characteristics of the\nfamily. The enzyme produced by this method is more likely than the previous\napproach to have the corresponding function, offering better odds of generating\ndiverse proteins with the desired functionality.",
+    "pdf_url": "http://arxiv.org/pdf/2502.07671v2",
+    "published": "2025-02-11",
+    "pdf_path": "papers/protein_design/2502.07671v2.pdf"
+  },
+  "q-bio/0402033v1": {
+    "title": "Inhibition of protein crystallization by evolutionary negative design",
+    "authors": [
+      "Jonathan P. K. Doye",
+      "Ard A. Louis",
+      "Michele Vendruscolo"
+    ],
+    "summary": "In this perspective we address the question: why are proteins seemingly so\nhard to crystallize? We suggest that this is because of evolutionary negative\ndesign, i.e. proteins have evolved not to crystallize, because crystallization,\nas with any type of protein aggregation, compromises the viability of the cell.\nThere is much evidence in the literature that supports this hypothesis,\nincluding the effect of mutations on the crystallizability of a protein, the\ncorrelations found in the properties of crystal contacts in bioinformatics\ndatabases, and the positive use of protein crystallization by bacteria and\nviruses.",
+    "pdf_url": "http://arxiv.org/pdf/q-bio/0402033v1",
+    "published": "2004-02-16",
+    "pdf_path": null
+  },
+  "2408.17241v2": {
+    "title": "Leveraging Deep Generative Model For Computational Protein Design And Optimization",
+    "authors": [
+      "Boqiao Lai"
+    ],
+    "summary": "Proteins are the fundamental macromolecules that play diverse and crucial\nroles in all living matter and have tremendous implications in healthcare,\nmanufacturing, and biotechnology. Their functions are largely determined by the\nsequences of amino acids that compose them and their unique three-dimensional\nstructures when folded. The recent surge in highly accurate computational\nprotein structure prediction tools has equipped scientists with the means to\nderive preliminary structural insights without the onerous costs of\nexperimental structure determination. These breakthroughs hold profound promise\nfor building robust and efficient in silico protein design systems.\n  While the prospect of designing de novo proteins with precise computational\naccuracy remains a grand challenge in biochemical engineering, conventional\nassembly-based and rational design methods often grapple with the expansive\ndesign space, resulting in suboptimal design success rates. Despite recently\nemerged deep learning-based models have shown promise in improving the\nefficiency of the computational protein design process, a significant gap\npersists between current design paradigms and their experimental realization.\nThis thesis will investigate the potential of deep generative models in\nrefining protein structure and sequence design methods, aiming to develop\nframeworks capable of crafting novel protein sequences with predetermined\nstructures or specific functionalities. By harnessing extensive protein\ndatabases and cutting-edge neural architectures, this research aims to enhance\nprecision and robustness in current protein design paradigms, potentially\npaving the way for advancements across various scientific fields.",
+    "pdf_url": "http://arxiv.org/pdf/2408.17241v2",
+    "published": "2024-08-30",
+    "pdf_path": "papers/protein_design/2408.17241v2.pdf"
+  },
+  "2111.07786v2": {
+    "title": "Independent SE(3)-Equivariant Models for End-to-End Rigid Protein Docking",
+    "authors": [
+      "Octavian-Eugen Ganea",
+      "Xinyuan Huang",
+      "Charlotte Bunne",
+      "Yatao Bian",
+      "Regina Barzilay",
+      "Tommi Jaakkola",
+      "Andreas Krause"
+    ],
+    "summary": "Protein complex formation is a central problem in biology, being involved in\nmost of the cell's processes, and essential for applications, e.g. drug design\nor protein engineering. We tackle rigid body protein-protein docking, i.e.,\ncomputationally predicting the 3D structure of a protein-protein complex from\nthe individual unbound structures, assuming no conformational change within the\nproteins happens during binding. We design a novel pairwise-independent\nSE(3)-equivariant graph matching network to predict the rotation and\ntranslation to place one of the proteins at the right docked position relative\nto the second protein. We mathematically guarantee a basic principle: the\npredicted complex is always identical regardless of the initial locations and\norientations of the two structures. Our model, named EquiDock, approximates the\nbinding pockets and predicts the docking poses using keypoint matching and\nalignment, achieved through optimal transport and a differentiable Kabsch\nalgorithm. Empirically, we achieve significant running time improvements and\noften outperform existing docking software despite not relying on heavy\ncandidate sampling, structure refinement, or templates.",
+    "pdf_url": "http://arxiv.org/pdf/2111.07786v2",
+    "published": "2021-11-15",
+    "pdf_path": "papers/protein_design/2111.07786v2.pdf"
+  }
+}
