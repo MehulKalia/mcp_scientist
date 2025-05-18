@@ -1,0 +1,37 @@
+# Designing a 50-aa Stapled α-Helix for MDM2 Binding
+
+Based on the provided paper on protein design using ProteinSolver and AlphaFold2, I'll design a 50-amino acid stapled α-helix that can bind to MDM2, which is a critical target for cancer therapy.
+
+## Design Approach
+
+The paper demonstrates a pipeline combining:
+1. ProteinSolver - a deep graph neural network that generates amino acid sequences compatible with desired structural constraints
+2. AlphaFold2 - for structure prediction from the designed sequences
+
+MDM2 is a negative regulator of the tumor suppressor P53, which is mentioned in the paper as one of their target proteins. Disrupting the MDM2-p53 interaction can reactivate p53 function in cancers.
+
+## Key Design Elements
+
+1. **Core Binding Residues**: The binding interface between MDM2 and p53 involves three critical hydrophobic residues (Phe19, Trp23, and Leu26) that fit into a hydrophobic cleft on MDM2.
+
+2. **Stapling Strategy**: I'll include two non-natural amino acids at positions i and i+4 (within the same helical face) to form the staple that stabilizes the α-helix. These will be represented as X in my sequence but would be unnatural olefinic amino acids in synthesis.
+
+3. **Helix-Promoting Residues**: To enhance helicity, I'll incorporate alanine, leucine, and glutamate residues at non-critical positions.
+
+4. **Solubility Considerations**: Include charged residues (Lys, Arg, Glu, Asp) on the solvent-exposed face to improve solubility.
+
+## Proposed 50-aa Sequence
+
+```
+EAELAAKLLXELWAXLPEYLAAELKRLAEELKKLAAELAAELAKELAALAQ
+```
+
+Design features:
+- Core MDM2-binding motif inspired by p53: LXELWAXLPE (where X represents stapling positions)
+- Staple positions at i, i+4 for optimal helix stabilization
+- Hydrophobic residues (L, W, F) positioned to interact with MDM2 binding pocket
+- Charged and polar residues on the opposite face for solubility
+- Alanine residues to promote helicity
+- N- and C-terminal capping residues to stabilize the helix
+
+This sequence is designed to fold into a stable α-helix with a well-defined binding face that presents key residues in the correct orientation for MDM2 binding, while the staple would provide conformational stability and potentially enhanced cell penetration. Following the approach described in the paper, this sequence could be validated using AlphaFold2 to predict its structure and assess the likelihood of successful MDM2 binding.

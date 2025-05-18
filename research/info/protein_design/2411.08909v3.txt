@@ -1,0 +1,37 @@
+# Designing a Stapled α-Helix for MDM2 Binding
+
+Based on the LC-PLM paper and current knowledge in protein design, I'll create a stapled α-helix peptide designed to bind MDM2, an important cancer target.
+
+## Design Approach
+
+The p53-MDM2 interaction is a well-established target for cancer therapeutics, where p53's helical region binds to a hydrophobic cleft on MDM2. I'll design a 50-amino acid stapled peptide that incorporates:
+
+1. The key binding residues from p53 (F19, W23, L26)
+2. Strategic placement of non-natural amino acids for staple formation
+3. Helicity-enhancing residues
+4. Solubility-improving features
+
+## Proposed Sequence (50 aa):
+
+```
+EAAAR FXXLL WAYLA KXXLE AAARA EAARA KXXLA WAYLA AXXRE AAARQ
+```
+
+Where:
+- XX represents positions for non-natural amino acids (e.g., (S)-2-(4'-pentenyl)alanine) that will form the staples
+- Key hydrophobic residues (F, W, L) are positioned to interact with MDM2's binding pocket
+- Alanine and glutamate residues enhance helicity
+- Charged residues (E, K, R, Q) improve solubility
+- Multiple staples (positions 6-10, 20-24, 31-35, 41-45) will stabilize the helical conformation
+
+## Rationale
+
+1. **Binding Interface**: The core MDM2-binding motif appears twice in the sequence, providing multiple potential binding modes
+
+2. **Staple Positioning**: The i, i+4 stapling pattern stabilizes the α-helix without disrupting the binding interface
+
+3. **Length Considerations**: Using the 50-amino acid length enables formation of a longer helix that can make additional contacts with MDM2 while maintaining structural stability
+
+4. **Solubility Enhancement**: Charged residues are positioned on the non-binding face to improve pharmacokinetic properties
+
+This design leverages the insights from the LC-PLM paper regarding protein structure prediction capabilities and incorporates established principles for designing stapled peptides with enhanced binding affinity and stability.

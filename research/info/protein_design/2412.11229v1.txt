@@ -1,0 +1,40 @@
+# Analysis of Knot Theory for Improving AlphaFold Protein Predictions
+
+Based on the research paper by Pranshu Jahagirdar, I can provide insights on designing a stapled α-helix peptide that binds to MDM2 while considering the knot theory issues identified in AlphaFold's predictions.
+
+## Key Findings from the Paper
+
+The research reveals that AlphaFold has limitations in accurately predicting proteins with complex topologies like knots:
+
+- While AlphaFold shows 95.6% accuracy in predicting the general shape of knots using Alexander-Briggs notation
+- It has a concerning 55.6% discrepancy in Gauss code analysis
+- This indicates AlphaFold struggles with accurately representing the intricate orientation and directionality of knots
+- The dual module design of AlphaFold (Evoformer + Structure module) allows residues to move freely, potentially violating peptide bond geometries
+
+## Design Considerations for MDM2-Binding Stapled Peptide
+
+For designing a 50-aa stapled α-helix that binds MDM2, I would recommend:
+
+1. **Base the design on experimental structures**: Since AlphaFold may misrepresent topologically complex structures, start with experimentally verified structures of MDM2-binding peptides like p53 peptide analogs.
+
+2. **Consider staple placement carefully**: 
+   - Position staples at i, i+4 or i, i+7 positions to stabilize the α-helical structure
+   - Avoid placing staples at the binding interface with MDM2
+   - Place staples on the solvent-exposed face of the helix
+
+3. **Focus on key binding residues**:
+   - Include F19, W23, and L26 equivalents (critical for MDM2 binding in p53)
+   - Maintain proper spacing of these residues along one face of the helix
+
+4. **Verify predictions experimentally**:
+   - Given AlphaFold's limitations with complex structures, any designed peptide should be experimentally validated
+
+5. **Proposed 50-aa sequence** (with stapling positions indicated by X):
+   ```
+   XEAEYFDLIXAAYFRDELXRWAGLLSXAERRAQEVXAXLRLYLEIPAAL
+   ```
+   Where X represents non-natural amino acids for stapling (typically pentenyl alanine)
+
+The staples would promote α-helical structure while the key hydrophobic residues (F, W, L) align on the binding face for MDM2 interaction.
+
+This design incorporates understanding of AlphaFold's limitations with complex topologies while utilizing established principles for stapled peptide design targeting MDM2.

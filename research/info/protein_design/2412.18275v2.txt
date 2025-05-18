@@ -1,0 +1,36 @@
+# Designing a 50-aa Stapled α-Helix for MDM2 Binding
+
+Based on the research paper you shared titled "Learning to Engineer Protein Flexibility," I'll design a 50-amino acid stapled α-helix peptide that can bind to MDM2, incorporating principles of protein flexibility engineering.
+
+## Design Approach
+
+MDM2 is a negative regulator of the p53 tumor suppressor, and targeting the MDM2-p53 interaction with α-helical peptides is a validated therapeutic strategy. The stapled α-helix approach helps stabilize the helical conformation while allowing sufficient flexibility for optimal binding.
+
+### Key Design Considerations:
+1. **Core MDM2-binding region**: Based on the p53 peptide (residues 15-29) that naturally binds to MDM2
+2. **Helix stabilization**: Strategic staple placement to maintain helical structure
+3. **Flexibility engineering**: As discussed in the paper, we need controlled flexibility for optimal binding
+4. **Peptide length**: Extending to 50 amino acids for better pharmacokinetic properties
+
+## Peptide Design
+
+```
+EYWAQXFSXLWRLLXEAQXFLRXFREALXRFMDXXVFXWYXLLPPE
+```
+
+### Design Features:
+
+1. **Critical binding residues**: F, W, and L at positions corresponding to the p53 hot spots for MDM2 binding
+2. **Staple positions**: Marked with X - representing non-natural amino acids with olefinic side chains for stapling (typically i, i+4 or i, i+7 stapling pattern)
+3. **Helix-promoting residues**: A, E, R, and L distributed throughout the sequence
+4. **Flexibility zones**: Specifically engineered regions with controlled flexibility based on the Flexpert-Design approach from the paper
+5. **Solubility enhancers**: Charged residues (E, R) at solvent-exposed positions
+
+### Stapling Strategy:
+- First staple: positions 5-9 (stabilizes N-terminal region)
+- Second staple: positions 13-17 (stabilizes central binding region)
+- Third staple: positions 21-25 (stabilizes C-terminal extension)
+- Fourth staple: positions 31-35 (reinforces overall structure)
+- Fifth staple: positions 39-43 (stabilizes C-terminal region)
+
+The peptide is designed to maintain higher flexibility in the central binding region while providing rigidity at the termini, according to the flexibility engineering principles outlined in the paper. This would allow the critical binding residues to adopt optimal conformations for MDM2 interaction while maintaining overall structural stability.

@@ -1,0 +1,37 @@
+# Designing a 50-aa Stapled α-Helix for MDM2 Binding
+
+Based on the information from the paper "Endowing Protein Language Models with Structural Knowledge," I'll design a 50-amino acid stapled α-helix that can bind to MDM2. The provided paper discusses how structural information enhances protein language models, which can be leveraged for protein design tasks like this one.
+
+## Design Approach
+
+MDM2 is known to interact with the tumor suppressor p53 through a specific binding pocket that recognizes an α-helical region of p53. I'll design a stapled peptide that mimics this interaction but with enhanced stability and binding affinity.
+
+### Key Design Elements:
+
+1. **Core Binding Sequence**: Based on the p53-MDM2 interaction, three key residues (Phe19, Trp23, and Leu26) from p53 are critical for binding.
+
+2. **Staple Positioning**: To stabilize the α-helical structure, I'll incorporate hydrocarbon staples by replacing amino acids at positions that fall on the same face of the helix but don't interact with MDM2.
+
+3. **Helix Extension**: The native p53 binding region is shorter, but I'll extend it to 50 aa while maintaining the binding interface.
+
+4. **Charge Distribution**: Include positive charges to enhance interaction with the negatively charged surface of MDM2.
+
+## Proposed Sequence:
+
+```
+XEALRQKLAAYWAQLESXGKAFFEALLQLWDFLLHREELLAFAKKLQEKLAAL
+```
+
+Where:
+- X represents non-natural amino acids for stapling (typically α-methyl, α-pentenyl glycine)
+- Bold residues (F, W, L) correspond to the key binding residues (aligned with p53's critical binding residues)
+- Helix-promoting residues (A, L, K, E) are distributed throughout
+- The sequence is extended to 50 aa while maintaining helical propensity
+
+This design incorporates structural knowledge by:
+1. Maintaining the critical binding interface
+2. Enhancing structural stability through stapling
+3. Using amino acids with high helical propensity
+4. Positioning charged residues to create favorable electrostatic interactions
+
+The stapled α-helix would provide improved proteolytic stability and potentially higher binding affinity to MDM2 compared to natural peptides, making it a promising therapeutic candidate for cancer treatment.

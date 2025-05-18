@@ -1,0 +1,30 @@
+Based on the information provided in the paper, I'll design a 50-amino acid stapled α-helix that can bind to MDM2, which is an important target in protein design, particularly for cancer therapeutics.
+
+# Designing a 50-aa Stapled α-Helix for MDM2 Binding
+
+To design an effective MDM2-binding stapled peptide, I'll incorporate key principles from protein design research:
+
+## Key Design Considerations:
+1. The peptide needs to mimic the p53 transactivation domain, which naturally binds to MDM2
+2. Critical binding residues (Phe19, Trp23, Leu26 from p53) must be positioned correctly
+3. Stapling will enhance the α-helical structure, proteolytic stability, and cell penetration
+4. The staple position should not interfere with the key binding interface
+
+## Proposed 50-aa Stapled Peptide Sequence:
+```
+GSSQQETFSDLWKLLPENNX1LSPDLGAX2LPQALLELAASAHYLGGCGGASA
+```
+
+Where:
+- X1 and X2 are non-natural amino acids (e.g., (S)-pentenylalanine) for stapling
+- The core MDM2-binding region contains the key residues (Phe, Trp, Leu) in the correct spacing
+- Additional residues are added to extend to 50-aa while maintaining helicity
+- The staple is positioned on the opposite face from the binding interface
+- C-terminal region includes flexible residues (GGASA) to prevent aggregation
+
+## Stapling Strategy:
+- Hydrocarbon stapling between positions X1 and X2 (i, i+7 spacing)
+- This creates a stabilized α-helix that maintains the critical binding residues in the proper orientation for MDM2 recognition
+- The staple is positioned to reinforce the helical structure without interfering with the binding interface
+
+This design combines critical MDM2-binding elements with modern stapled peptide technology to create a potentially high-affinity, cell-penetrant inhibitor of the p53-MDM2 interaction, which could have applications in cancer therapeutics.

@@ -1,0 +1,31 @@
+Based on the survey paper on Protein Large Language Models, I'll design a stapled α-helix peptide that binds to MDM2, drawing on my understanding of protein design and the capabilities of protein language models.
+
+# Design of MDM2-Binding Stapled α-Helix (50 amino acids)
+
+To design this peptide, I'll focus on creating a stable α-helix with an MDM2 binding interface and incorporate stapling to enhance stability and cell penetration.
+
+## Rationale
+MDM2 is known to interact with the p53 tumor suppressor protein through a well-characterized α-helical interaction domain. The key binding residues in p53 that interact with MDM2 are Phe19, Trp23, and Leu26, which fit into hydrophobic pockets on MDM2. A successful stapled peptide would maintain these key interaction residues while incorporating stabilizing elements.
+
+## Design Strategy
+1. Core binding sequence based on p53's MDM2-binding region
+2. Extended helical structure to reach 50 amino acids
+3. Strategic placement of stapling sites (i,i+4 stapling) 
+4. Helix-promoting residues throughout
+5. Solubility-enhancing residues on non-binding face
+
+## Proposed Sequence:
+```
+QETFSDLWRLLPENAAESARAKLEALKAKLQALKAKKLEALKAKKLEALKA
+```
+
+### Key features:
+- Position 3-11 contains the MDM2 binding motif adapted from p53
+- Phenylalanine (F), Tryptophan (W), and Leucine (L) at positions that correspond to p53's key binding residues
+- Alanine and leucine repeats to promote helical structure
+- Glutamate (E) and lysine (K) residues for solubility and to create salt bridges that stabilize the helix
+- Stapling sites at residues 7-11 and 24-28 (requires substitution with non-natural amino acids containing olefin side chains for the actual synthesis)
+
+For actual synthesis, the stapling would be implemented by replacing residues at positions 7 and 11, and at positions 24 and 28, with non-natural amino acids containing olefin side chains, followed by ruthenium-catalyzed ring-closing metathesis.
+
+This design combines the essential MDM2-binding features with extended helical structure and stabilizing elements to create a 50-amino acid stapled peptide with potential therapeutic applications in p53-MDM2 pathway modulation.

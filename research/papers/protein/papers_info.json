@@ -1,0 +1,13 @@
+{
+  "1210.2515v1": {
+    "title": "Protein Inference and Protein Quantification: Two Sides of the Same Coin",
+    "authors": [
+      "Ting Huang",
+      "Peijun Zhu",
+      "Zengyou He"
+    ],
+    "summary": "Motivation: In mass spectrometry-based shotgun proteomics, protein\nquantification and protein identification are two major computational problems.\nTo quantify the protein abundance, a list of proteins must be firstly inferred\nfrom the sample. Then the relative or absolute protein abundance is estimated\nwith quantification methods, such as spectral counting. Until now, researchers\nhave been dealing with these two processes separately. In fact, they are two\nsides of same coin in the sense that truly present proteins are those proteins\nwith non-zero abundances. Then, one interesting question is if we regard the\nprotein inference problem as a special protein quantification problem, is it\npossible to achieve better protein inference performance?\n  Contribution: In this paper, we investigate the feasibility of using protein\nquantification methods to solve the protein inference problem. Protein\ninference is to determine whether each candidate protein is present in the\nsample or not. Protein quantification is to calculate the abundance of each\nprotein. Naturally, the absent proteins should have zero abundances. Thus, we\nargue that the protein inference problem can be viewed as a special case of\nprotein quantification problem: present proteins are those proteins with\nnon-zero abundances. Based on this idea, our paper tries to use three very\nsimple protein quantification methods to solve the protein inference problem\neffectively.\n  Results: The experimental results on six datasets show that these three\nmethods are competitive with previous protein inference algorithms. This\ndemonstrates that it is plausible to take the protein inference problem as a\nspecial case of protein quantification, which opens the door of devising more\neffective protein inference algorithms from a quantification perspective.",
+    "pdf_url": "http://arxiv.org/pdf/1210.2515v1",
+    "published": "2012-10-09"
+  }
+}

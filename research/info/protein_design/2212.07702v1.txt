@@ -1,0 +1,41 @@
+# Designing a Stapled α-Helix for MDM2 Binding
+
+Based on the document about protein structure prediction advances, I'll design a stapled α-helix peptide that can effectively bind to MDM2, a critical target in cancer therapeutics.
+
+## Background
+MDM2 is a negative regulator of the tumor suppressor p53. The p53-MDM2 interaction occurs through a well-characterized binding pocket where three key residues (Phe19, Trp23, and Leu26) from p53's helical domain insert into hydrophobic clefts on MDM2.
+
+## Design Strategy
+I'll create a 50-amino acid peptide with:
+1. A core α-helical region incorporating the key binding residues
+2. Strategically placed non-natural amino acids for stapling
+3. Terminal regions for stability and solubility
+
+## Peptide Design
+
+```
+GSEELLRKLFEAWEFLDLLEAAFQAFEAAHAANFAALQARARARGHHHHHH
+```
+
+### Design Rationale:
+
+1. **Core MDM2-binding region (residues 9-25):**
+   - Contains the critical "FxxWxxL" motif (F10, W14, L18) that mimics p53's binding epitope
+   - Hydrophobic residues positioned at i, i+4, i+7 to face the MDM2 binding pocket
+   - Stapling sites at positions 8 and 15 (LL residues would be replaced with non-natural amino acids containing olefin side chains for stapling)
+
+2. **Helicity-promoting elements:**
+   - Alanines placed to reinforce helical propensity
+   - Strategic positioning of Glu-Lys pairs (i, i+4) for salt bridges that stabilize the helix
+
+3. **Terminal regions:**
+   - N-terminus: GS sequence for flexibility
+   - C-terminus: Contains Arg residues for solubility and a His-tag for purification
+
+4. **Overall properties:**
+   - Length: 50 amino acids
+   - Approximately 40% helical content
+   - Moderate hydrophilicity for solubility
+   - Net positive charge to enhance cell penetration
+
+This design leverages AlphaFold's insights about protein structure and could be validated using the computational tools mentioned in the paper, such as AlphaFold2 or RoseTTAFold. For experimental validation, the peptide binding to MDM2 could be assessed through fluorescence polarization assays or isothermal titration calorimetry.

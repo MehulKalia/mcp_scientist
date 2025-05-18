@@ -1,0 +1,45 @@
+# Design of a 50-aa Stapled α-Helix for MDM2 Binding
+
+Based on the paper you shared about EQUIDOCK, a rigid protein docking model, I'll design a 50-amino acid stapled α-helix that can effectively bind to MDM2, an important cancer target.
+
+## Background Knowledge
+
+MDM2 is a negative regulator of the tumor suppressor p53. The p53-MDM2 interaction involves an α-helical region of p53 (residues 15-29) that binds to a hydrophobic cleft in MDM2. Several stapled peptides targeting this interaction have been developed, with the most well-known being the p53-derived stapled peptides.
+
+## Design Strategy
+
+1. Start with the p53 helical binding region (residues 15-29) as the core
+2. Extend the helix to 50 amino acids with stability-enhancing residues
+3. Incorporate hydrocarbon stapling to stabilize the α-helical conformation
+4. Ensure the key binding residues face the MDM2 interface
+5. Add solubility-enhancing residues on the non-interacting face
+
+## Proposed 50-aa Stapled Peptide Sequence
+
+```
+Ac-SAEEYLSXFLEXLLPENAEAAEALKRARNDEEXAKFFXALQAELAKLKEEAEK-NH2
+     |________|       |_____________|
+         S1                  S2
+```
+
+Where:
+- X = pentenylalanine (synthetic amino acid for stapling)
+- S1 and S2 indicate the two hydrocarbon staples
+- Ac- = N-terminal acetylation
+- -NH2 = C-terminal amidation
+
+## Design Rationale
+
+1. **Core binding region**: EYLSXFLEXLLP corresponds to the critical p53 residues that interact with MDM2, with F19, L22, and W23 (replaced with F) being essential for binding.
+
+2. **Staple positions**: Placed at i, i+4 positions (X) to stabilize the α-helix without disrupting the binding interface. The first staple (S1) stabilizes the crucial binding region, while the second staple (S2) reinforces the extended helix.
+
+3. **Helix extension**: Added amino acids that strongly favor α-helical conformation (A, E, K, L) to extend the peptide to 50 aa.
+
+4. **Solubility enhancement**: Included charged residues (E, K) on the solvent-exposed face to increase solubility.
+
+5. **Helix capping**: N-terminal acetylation and C-terminal amidation to neutralize terminal charges and enhance helix stability.
+
+6. **Helix-promoting residues**: Alanine residues distributed throughout provide strong helix propensity without interfering with binding.
+
+This design combines the critical MDM2-binding elements from p53 with structural modifications that should enhance stability, binding affinity, and cellular penetration. The peptide could be further optimized through experimental testing and computational modeling using tools like EQUIDOCK mentioned in your paper.
