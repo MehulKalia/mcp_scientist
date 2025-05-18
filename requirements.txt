@@ -1,0 +1,10 @@
+requests>=2.28.0
+py3Dmol>=1.8.0
+mcp>=0.1.0
+mcp-server>=0.1.0
+
+# For PNG image generation (optional)
+# pymol-open-source>=2.5.0  # Uncomment to install PyMOL (large dependency)
+biopython>=1.79
+matplotlib>=3.5.0
+numpy>=1.21.0 
