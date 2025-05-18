@@ -74,7 +74,8 @@ class ProteinDesignAgent:
         esmfold_mcp_path: Optional[str] = "fold_server.py",
         llm_api_key: Optional[str] = os.environ.get("ANTHROPIC_API_KEY"),
         llm_api_url: str = "https://api.anthropic.com/v1/messages",
-        verbose: bool = True
+        verbose: bool = True,
+        model_name: str = "claude-3-5-sonnet-20240620"  # Updated to newer model
     ):
         """
         Initialize the protein design agent.
@@ -84,12 +85,14 @@ class ProteinDesignAgent:
             llm_api_key: API key for the LLM service (Claude)
             llm_api_url: URL for the LLM API
             verbose: Whether to print detailed logs
+            model_name: Name of the Claude model to use
         """
         self.esmfold_mcp_path = esmfold_mcp_path
         self.llm_api_key = llm_api_key
         self.llm_api_url = llm_api_url
         self.verbose = verbose
         self.session_id = str(uuid.uuid4())
+        self.model_name = model_name  # Store model name
         
         # Initialize MCP client
         self.mcp_client = None
@@ -116,10 +119,40 @@ class ProteinDesignAgent:
     def log(self, message: str, color: Optional[str] = None) -> None:
         """Log a message if verbose mode is enabled."""
         if self.verbose:
+            # Add emoji indicators based on color and message content
+            emoji = ""
+            
+            # Check for specific message types first, before applying color defaults
+            if "STRUCTURE PREDICTION" in message:
+                emoji = "🧬 "  # DNA helix for structure prediction
+            elif "BINDING PREDICTION" in message:
+                emoji = "🧪 "  # Test tube for binding prediction
+            elif "Making API call" in message:
+                emoji = "🌐 "  # Globe for API calls
+            elif "Sending query to Claude" in message:
+                emoji = "🤖 "  # Robot for AI interactions
+            elif "Successfully" in message or "SUCCESS" in message:
+                emoji = "✅ "  # Green checkmark for success
+            # Then handle color-based defaults
+            elif color:
+                if color == Colors.GREEN or color == Colors.BOLD + Colors.GREEN:
+                    emoji = "✅ "  # Green checkmark for success
+                elif color == Colors.RED or color == Colors.BOLD + Colors.RED:
+                    # Only use red X for actual errors, not status messages
+                    if any(err in message for err in ["Error", "error", "ERROR", "Failed", "failed", "FAILURE"]):
+                        emoji = "❌ "  # Red X for errors
+                    else:
+                        emoji = "🔴 "  # Red circle for important (but not error) messages
+                elif color == Colors.YELLOW or color == Colors.BOLD + Colors.YELLOW:
+                    emoji = "⚠️ "  # Yellow warning triangle for warnings
+                elif color == Colors.BLUE or color == Colors.BOLD + Colors.BLUE:
+                    emoji = "🔹 "  # Blue dot for info
+            
+            # Print message with emoji
             if color:
-                print(f"{color}[ProteinDesignAgent] {message}{Colors.END}")
+                print(f"{color}{emoji}[ProteinDesignAgent] {message}{Colors.END}")
             else:
-                print(f"[ProteinDesignAgent] {message}")
+                print(f"{emoji}[ProteinDesignAgent] {message}")
                 
     async def connect_to_server_and_run(self):
         """
@@ -215,7 +248,7 @@ class ProteinDesignAgent:
         
         response = self.anthropic.messages.create(
             max_tokens=2024,
-            model="claude-3-sonnet-20240229",
+            model=self.model_name,
             tools=available_tools,
             messages=messages
         )
@@ -285,7 +318,7 @@ class ProteinDesignAgent:
                         # Get next response
                         response = self.anthropic.messages.create(
                             max_tokens=2024,
-                            model="claude-3-sonnet-20240229",
+                            model=self.model_name,
                             tools=available_tools,
                             messages=messages
                         )
@@ -314,7 +347,7 @@ class ProteinDesignAgent:
                         # Continue conversation with error
                         response = self.anthropic.messages.create(
                             max_tokens=2024,
-                            model="claude-3-sonnet-20240229",
+                            model=self.model_name,
                             tools=available_tools,
                             messages=messages
                         )
@@ -673,7 +706,7 @@ class ProteinDesignAgent:
                 self.log("Making API call to Claude...", Colors.RED)
                 
                 response = self.anthropic.messages.create(
-                    model="claude-3-sonnet-20240229",
+                    model=self.model_name,
                     max_tokens=4000,
                     messages=messages,
                     system="You are a protein design expert agent tasked with designing novel proteins for specific purposes."
@@ -734,7 +767,7 @@ class ProteinDesignAgent:
         }
         
         payload = {
-            "model": "claude-3-sonnet-20240229",
+            "model": self.model_name,
             "max_tokens": 4000,
             "messages": messages,
             "system": system_prompt
@@ -975,24 +1008,58 @@ class ProteinDesignAgent:
 
 # Example usage
 if __name__ == "__main__":
-    # Example prompt
-    prompt = "Design a 50‑aa stapled α‑helix that binds MDM2"
+    # Display cool ASCII art banner
+    print("""
+  _____           _         _____            
+ |  __ \         | |       / ____|           
+ | |__) | __ ___ | |_ ___ | |  __  ___ _ __  
+ |  ___/ '__/ _ \| __/ _ \| | |_ |/ _ \ '_ \ 
+ | |   | | | (_) | || (_) | |__| |  __/ | | |
+ |_|   |_|  \___/ \__\___/ \_____|\___|_| |_|
+                                             
+    """)
+    print("🧬 Welcome to ProtoGen - Protein Design Agent\n")
     
-    # Get API key from environment or set directly
-    llm_api_key = os.environ.get("ANTHROPIC_API_KEY")
+    import argparse
+    
+    # Set up argument parser
+    parser = argparse.ArgumentParser(description='ProtoGen: AI-powered protein design agent')
+    parser.add_argument('--prompt', type=str, help='Design prompt (e.g., "Design a 50‑aa stapled α‑helix that binds MDM2")')
+    args = parser.parse_args()
+    
+    # Get design prompt from arguments or user input
+    if args.prompt:
+        prompt = args.prompt
+    else:
+        prompt = input("🔍 Enter your protein design prompt (e.g., 'Design a 50‑aa stapled α‑helix that binds MDM2'): ")
     
     # Check for required packages
     if not ASYNC_MCP_AVAILABLE:
-        print("\n⚠️ MCP library not found. Please install it with:")
-        print("pip install mcp")
+        print("\n❌ MCP library not found. Please install it with:")
+        print("   pip install mcp")
+    else:
+        print("✅ MCP library found")
     
     if not ANTHROPIC_CLIENT_AVAILABLE:
-        print("\n⚠️ Anthropic client not found. Please install it with:")
-        print("pip install anthropic")
+        print("\n❌ Anthropic client not found. Please install it with:")
+        print("   pip install anthropic")
+    else:
+        print("✅ Anthropic client found")
     
     if not nest_asyncio:
-        print("\n⚠️ nest_asyncio not found. Please install it with:")
-        print("pip install nest-asyncio")
+        print("\n❌ nest_asyncio not found. Please install it with:")
+        print("   pip install nest-asyncio")
+    else:
+        print("✅ nest_asyncio found")
+    
+    # Get API key from environment or prompt user
+    llm_api_key = os.environ.get("ANTHROPIC_API_KEY")
+    if not llm_api_key:
+        llm_api_key = input("🔑 Enter your Anthropic API key (or set ANTHROPIC_API_KEY environment variable): ")
+    else:
+        print("✅ Found Anthropic API key in environment")
+    
+    print("\n🚀 Starting protein design process...")
     
     # Create the agent
     agent = ProteinDesignAgent(
@@ -1005,8 +1072,8 @@ if __name__ == "__main__":
     results = agent.run(prompt)
     
     # Display results summary
-    print("\n=== DESIGN RESULTS ===")
-    print(f"Best sequence: {results['final_sequence']}")
-    print(f"Binding score: {results['final_binding_score']:.2f}")
-    print("\n=== RATIONALE ===")
+    print("\n✨ === DESIGN RESULTS === ✨")
+    print(f"🧬 Best sequence: {results['final_sequence']}")
+    print(f"📊 Binding score: {results['final_binding_score']:.2f}")
+    print("\n📝 === RATIONALE === 📝")
     print(results["rationale"])
