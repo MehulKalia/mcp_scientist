@@ -1,0 +1,55 @@
+# Global-Context Aware Generative Protein Design for MDM2 Binding
+
+Based on the paper you shared, I'll develop a strategy for designing a 50-amino acid stapled α-helix that can bind to MDM2 using the Global-Context Aware (GCA) approach.
+
+## Key Insights from the Paper
+
+The GCA method combines:
+1. **Local modules** - Graph attention networks that focus on relationships between neighboring amino acids
+2. **Global modules** - Self-attention networks that capture non-local contexts across the entire protein structure
+
+This approach outperforms other structure-based protein design methods, achieving state-of-the-art recovery rates (REC) of 47.0 on the TS50 dataset versus next-best performer GVP at 44.1.
+
+## Design Strategy for MDM2-Binding Stapled α-Helix
+
+### Step 1: Structural Template Selection
+- Use known MDM2-binding helices as templates (e.g., p53 TAD or nutlin-derived peptides)
+- Focus on the key binding residues F19, W23, and L26 (p53 numbering) that insert into MDM2's hydrophobic pocket
+
+### Step 2: Backbone Design
+- Generate a 50-aa backbone with optimal α-helical geometry
+- Position critical binding residues at the MDM2 interface
+- Identify optimal positions for staple placement (typically i, i+4 or i, i+7 spacing)
+
+### Step 3: Sequence Design Using GCA
+- Represent the backbone as a graph where:
+  - Nodes represent amino acid positions
+  - Edges represent spatial relationships between residues
+- Apply the GCA architecture with 3 blocks of local and global modules
+- Preserve key binding residues while optimizing surrounding sequence
+
+### Step 4: Stapling Placement
+- Place staples on the opposite face from the binding interface
+- Use non-natural amino acids (e.g., pentenyl alanine) at positions i and i+4/i+7
+- Ensure staples reinforce helicity without disrupting binding interactions
+
+### Step 5: Validation and Refinement
+- Calculate perplexity scores to evaluate sequence naturalness
+- Focus on recovery of evolutionarily conserved positions
+- Iteratively refine the sequence based on global context awareness
+
+## Proposed Sequence Design Features
+
+1. **Critical MDM2-Binding Residues**:
+   - Hydrophobic residues (F, W, L) at key interaction points
+   - Complementary charged residues at the periphery
+
+2. **Helix-Stabilizing Elements**:
+   - High helix propensity residues (A, E, L, M) at non-interface positions
+   - Strategic placement of staples to minimize disruption of binding
+
+3. **Solubility Features**:
+   - Hydrophilic residues on solvent-exposed faces
+   - Charged residues (E, K) to enhance solubility
+
+By leveraging the GCA model's ability to account for both local interactions and global context, this design approach should produce a stapled α-helix with optimized binding affinity for MDM2 and enhanced proteolytic stability compared to conventional designs.

@@ -1,0 +1,35 @@
+# Designing a Stapled α-Helix to Bind MDM2
+
+Based on the paper "ProtFIM: Fill-in-Middle Protein Sequence Design via Protein Language Models," I'll design a 50-amino acid stapled α-helix that targets the MDM2 protein.
+
+## Background and Approach
+
+MDM2 is a key negative regulator of the tumor suppressor p53. Disrupting the MDM2-p53 interaction is a promising strategy for cancer therapy. Several peptides and small molecules have been developed to bind to MDM2 in the p53-binding pocket.
+
+The p53 binding to MDM2 occurs through three key hydrophobic residues (Phe19, Trp23, and Leu26) that insert into a hydrophobic cleft on MDM2. A stapled α-helix would provide conformational stability to maintain these key interaction points.
+
+## Design Strategy
+
+1. Begin with a helical backbone scaffold
+2. Include the critical MDM2-binding residues (Phe, Trp, Leu) at key positions
+3. Incorporate stapling sites (typically i, i+4 or i, i+7 positions) using non-natural amino acids
+4. Design surrounding residues to enhance solubility and stability
+5. Validate the secondary structure prediction
+
+## Proposed Sequence
+
+```
+EEWQALSDLFDLWKLLPENGVDAARAAILEYINQLKEEEGNLRSALYYNTL
+```
+
+Key features:
+- Length: 50 amino acids
+- Core binding motif (LSDLFDLWKLLPEN) includes the key hydrophobic residues for MDM2 binding
+- Potential stapling sites at positions 13 and 17 (i, i+4) and 20 and 27 (i, i+7)
+- Includes charged residues (E, K, R) to enhance solubility
+- N- and C-terminal capping residues to stabilize the helix
+- Designed to maintain α-helical structure
+
+For actual implementation, the stapling would require substituting specific residues with non-natural amino acids containing olefin side chains that can be cross-linked via ring-closing metathesis. Common stapling systems include replacing residues at i, i+4 or i, i+7 positions with S5 (for i, i+4) or S8 (for i, i+7) non-natural amino acids.
+
+This design leverages the principles from the ProtFIM paper, which demonstrated how language models can be effective for designing proteins with specific structural requirements, particularly for maintaining secondary structures like α-helices.

@@ -1,0 +1,55 @@
+# Designing a Stapled α-Helix for MDM2 Binding
+
+Based on the provided paper, I'll outline a comprehensive approach to designing a 50-amino acid stapled α-helix that binds to MDM2.
+
+## Background Context
+
+The paper discusses developing machine learning models to predict protein solubility, which is correlated with protein activity in some cases. While the paper focuses on solubility prediction rather than peptide design specifically, I can apply relevant principles to design an effective MDM2-binding stapled peptide.
+
+## Design Strategy for MDM2-Binding Stapled α-Helix
+
+### 1. Structural Basis
+- MDM2 is known to bind to the p53 tumor suppressor via an α-helical motif
+- The key binding residues in the p53-MDM2 interaction are well-characterized (F19, W23, L26)
+- These hydrophobic residues insert into a hydrophobic cleft on MDM2
+
+### 2. Peptide Framework
+- Start with a 50-amino acid α-helical scaffold
+- Include the key MDM2-binding residues (Phe, Trp, Leu) at positions that would contact MDM2
+- Design the remaining sequence to:
+  * Promote α-helical conformation
+  * Enhance solubility (as discussed in the paper)
+  * Include appropriate positions for staple placement
+
+### 3. Staple Positioning
+- Place hydrocarbon staples approximately 3-4 helical turns apart
+- Position staples on the face of the helix opposite to the MDM2-binding interface
+- Use i, i+4 or i, i+7 stapling positions for optimal helix stabilization
+
+### 4. Proposed Sequence Design
+```
+XEAYLXQFMDLWKLLPEGFSELWAEIAXLFPDXAEALKRARNDEELNKL
+```
+
+Where:
+- X represents non-natural amino acids for staple attachment (typically pentenyl alanine)
+- Bold residues (F, W, L) are critical for MDM2 binding
+- Remaining residues are designed to:
+  * Promote helicity (A, E, K, L)
+  * Enhance solubility (hydrophilic residues on solvent-exposed face)
+  * Provide structural stability
+
+### 5. Solubility Considerations
+Applying the paper's findings:
+- Employ a balanced amino acid composition with optimal hydrophobicity
+- Include charged residues (E, K, R) on the solvent-exposed face
+- Avoid excessive hydrophobic patches outside the binding interface
+- Include helix-capping residues to enhance both structure and solubility
+
+### 6. Validation Strategy
+- Use SVM-based prediction models (as described in the paper) to predict solubility
+- Perform molecular dynamics simulations to assess helical stability
+- Test binding affinity to MDM2 using biophysical methods (ITC, SPR)
+- Assess cell penetration and in vivo stability
+
+This design combines structural knowledge of MDM2-peptide interactions with the solubility principles discussed in the paper to create an optimized stapled peptide with potential therapeutic applications.

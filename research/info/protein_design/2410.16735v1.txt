@@ -1,0 +1,39 @@
+# Designing a Stapled α-Helix for MDM2 Binding
+
+Based on the paper you shared about membrane protein design using masked diffusion language models (MeMDLM), I can apply these advanced protein design principles to create a stapled α-helical peptide that binds to MDM2.
+
+## Design Strategy
+
+MDM2 is a critical negative regulator of the tumor suppressor p53, making it an important cancer therapeutic target. The p53-MDM2 interaction occurs through a well-characterized α-helical motif, which provides an excellent template for designing a stapled peptide inhibitor.
+
+### Key Design Elements:
+
+1. **Core Binding Sequence**: I'll incorporate the critical MDM2-binding residues from p53 (F19, W23, L26) which form a hydrophobic interface with MDM2's binding pocket.
+
+2. **Stapling Positions**: I'll place the staple on the opposite face of the helix from the binding interface, typically at positions i and i+4 (for single staples) or multiple stapling points for enhanced stability.
+
+3. **Helix-Promoting Residues**: I'll incorporate alanine, leucine, and glutamate at non-interface positions to promote helicity.
+
+4. **Solubility Enhancers**: Addition of charged residues at solvent-exposed positions to improve solubility.
+
+5. **N- and C-terminal Capping**: To stabilize the helix ends and prevent fraying.
+
+## Proposed 50-aa Stapled Peptide Sequence:
+
+```
+GSEELLRRLFEAARXLWAFLSDXLPAAARGDSEQIKNFFEKGLKLIEAESANR
+```
+
+Where X represents non-natural amino acids (typically pentenyl alanine) used for stapling.
+
+### Design Rationale:
+
+- The core MDM2-binding motif is maintained with the F, W, L residues (shown in bold if viewed in the right sequence)
+- Stapling positions (X) are placed at i, i+4 positions on the non-binding face
+- Helix-promoting residues like alanine, leucine, and glutamate are incorporated
+- Charged residues (E, R, K) are included for solubility
+- Terminal regions include helix capping motifs
+
+This design leverages the MeMDLM approach described in the paper, which can model the complex physicochemical properties important for membrane-peptide interactions. The peptide is designed to be stable in aqueous solution while maintaining the key binding elements needed for MDM2 interaction.
+
+For experimental validation, I would recommend testing this sequence for helicity using circular dichroism, binding affinity via isothermal titration calorimetry, and functional activity in cellular p53 reporter assays.

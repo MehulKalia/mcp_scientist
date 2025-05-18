@@ -1,0 +1,47 @@
+# Design of a 50-aa Stapled α-Helix for MDM2 Binding
+
+Based on the SAGE-Prot framework described in the paper, I'll design a 50-amino acid stapled α-helix peptide that binds to MDM2 with high affinity.
+
+## Design Strategy
+
+The paper describes SAGE-Prot as a framework that iteratively combines autoregressive protein generation with quantitative structure-property relationship (QSPR) models to optimize protein sequences for specific properties. This is perfect for designing a stapled peptide to target MDM2.
+
+## Key Design Elements
+
+1. **Core MDM2 Binding Motif**: Incorporating the key residues that mediate p53-MDM2 interaction (Phe19, Trp23, and Leu26 in p53)
+
+2. **Helicity Promotion**: Including helix-stabilizing residues (Ala, Leu, Arg, Glu)
+
+3. **Staple Placement**: Positioning the staple between residues i and i+4 to maintain the α-helix
+
+4. **Solubility Enhancement**: Adding charged residues on the solvent-exposed face
+
+5. **Length Optimization**: Extending to 50 aa while maintaining structural integrity
+
+## Proposed Sequence
+
+```
+XEAALAREWXAYLDALLKKHEAALAKKLEAAIRKKLEAELRKKLEALRKKA
+```
+
+Where X represents non-natural amino acids for stapling (typically pentenyl alanine derivatives)
+
+## Design Rationale
+
+1. **Binding Interface**:
+   - REWA motif incorporates key hydrophobic residues that mimic p53's MDM2-binding region
+   - YLDAL provides additional hydrophobic contacts with MDM2's binding pocket
+
+2. **Helical Stability**:
+   - Stapling between positions 1 and 5 (X-X) reinforces the α-helical structure
+   - High helix propensity residues (Ala, Leu) throughout the sequence
+
+3. **Solubility**:
+   - Charged residues (Arg, Glu, Lys) positioned on the solvent-exposed face
+   - Alternating positive and negative charges to prevent aggregation
+
+4. **Extended Structure**:
+   - Repeating helical motifs in the C-terminal region to maintain the overall structure
+   - Gradual transition from the binding region to structural stabilizing region
+
+This design would benefit from experimental validation using the methods described in the paper, particularly the iterative optimization approach that combines generation and evaluation in SAGE-Prot.

@@ -1,0 +1,49 @@
+# Designing a 50-aa Stapled α-Helix that Binds MDM2
+
+Based on the research paper you've shared about ForceGen and protein design, I can develop a design strategy for a 50-amino acid stapled α-helix that effectively binds to MDM2.
+
+## Design Considerations
+
+MDM2 is a key negative regulator of the p53 tumor suppressor, and developing peptides that disrupt the MDM2-p53 interaction is a valuable strategy for cancer therapeutics. A stapled α-helix would provide enhanced stability and cell penetration compared to unmodified peptides.
+
+## Key Design Elements:
+
+1. **Core Binding Residues**: The peptide needs to include the critical residues that mimic the p53-MDM2 interaction interface (F19, W23, and L26 from p53)
+
+2. **Helix Stabilization**: 
+   - Strategic placement of staple positions (i+4 or i+7 spacing)
+   - Use of helix-promoting residues like alanine, leucine, and glutamate
+
+3. **Solubility Enhancement**:
+   - Inclusion of charged residues on the solvent-exposed face
+   - Balance of hydrophobic and hydrophilic residues
+
+4. **Length Optimization**:
+   - 50 amino acids is longer than typical stapled peptides
+   - Distribute binding motifs optimally across the sequence
+
+## Proposed Sequence:
+
+```
+EAAKRXAAFXDLWKLLPENLEALEKEIAKLEAENRQLAEKRIKELEXKIXK
+```
+
+Where X represents non-natural amino acids for stapling (typically pentenylalanine)
+
+## Stapling Strategy:
+
+- First staple: Positions 5-9
+- Second staple: Positions 38-42
+
+## Rationale:
+
+This design incorporates:
+- The critical p53 binding motif (F19, W23, L26)
+- Helix-promoting residues (alanine, leucine)
+- Charged residues for solubility (glutamate, lysine)
+- Strategic stapling positions to reinforce the helical structure
+- Spacing to ensure the binding interface residues are properly presented
+
+The mechanical unfolding properties of this stapled peptide would show increased resistance to force, similar to the patterns identified in the ForceGen paper, enhancing stability while maintaining the binding affinity to MDM2.
+
+Using this approach, we could leverage computational design methods like those described in the paper to further optimize the sequence based on predicted mechanical properties.

@@ -1,0 +1,44 @@
+# Designing a 50-aa Stapled α-Helix for MDM2 Binding
+
+Based on the information from the paper "Steering Protein Family Design through Profile Bayesian Flow," I'll design a 50-amino acid stapled α-helix optimized to bind MDM2, a critical cancer target.
+
+## Design Strategy
+
+MDM2 is a negative regulator of the tumor suppressor p53. Disrupting the p53-MDM2 interaction with a stapled peptide is a promising therapeutic approach. I'll design this peptide based on key principles:
+
+1. **Core Binding Motif**: Incorporate the critical residues from p53 that bind to MDM2 (F19, W23, L26)
+2. **Helical Structure**: Design for optimal α-helical propensity
+3. **Staple Placement**: Position hydrocarbon staples to reinforce helicity while not interfering with the binding interface
+4. **Solubility**: Include charged residues at solvent-exposed positions
+5. **Length**: Extend to 50 aa for enhanced stability and potential additional interactions
+
+## Designed Sequence
+
+```
+EAASRDFYLGWALLSAAEELKKLLEAAGWRFLRRLLRSAAEEIAALASEIKQS
+|---S5---|                |---S5---|
+```
+
+Where S5 indicates positions of staple placement (i,i+4 stapling)
+
+### Key Features:
+
+1. **MDM2 Binding Residues**:
+   - F9 (corresponds to p53 F19)
+   - W13 (corresponds to p53 W23)
+   - L16 (corresponds to p53 L26)
+   - Additional hydrophobic residues (F31, L35) to enhance binding
+
+2. **Staple Positions**:
+   - First staple: positions 5-9 (replacing residues with staple-compatible amino acids)
+   - Second staple: positions 27-31 (stabilizing the extended helix)
+
+3. **Helix-Promoting Residues**:
+   - Alanines at multiple positions promote helicity
+   - Leucines provide both helicity and hydrophobic interactions
+
+4. **Solubilizing Elements**:
+   - Charged residues (E, R, K) at solvent-exposed positions
+   - Balanced charge distribution for solubility
+
+This designed peptide incorporates principles from the ProfileBFN approach, considering both structural conservation and functional requirements for effective MDM2 binding.

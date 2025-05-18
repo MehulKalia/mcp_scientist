@@ -1,0 +1,41 @@
+Based on the paper "How to Hallucinate Functional Proteins," I can provide you with guidance on designing a 50-amino acid stapled α-helix that binds to MDM2, which is an important target for cancer therapeutics.
+
+## Background Information
+
+MDM2 is a negative regulator of the tumor suppressor p53, and disrupting the MDM2-p53 interaction is a promising cancer treatment strategy. Stapled α-helices are peptides with chemical cross-links (staples) that enhance their stability, helicity, and binding affinity.
+
+## Design Strategy
+
+The paper discusses BioSeqVAE, a variational autoencoder model that can generate syntactically valid protein sequences that are likely to fold and function. While we can't directly access this model, I can use principles from protein design to suggest a rational approach:
+
+1. **Base the core sequence on known MDM2 binders**: Start with the p53 α-helical region that binds to MDM2 (residues 15-29), which contains key residues F19, W23, and L26 that insert into hydrophobic pockets on MDM2.
+
+2. **Extend to 50 amino acids**: Add stabilizing residues on both N and C termini while maintaining the α-helical propensity.
+
+3. **Incorporate stapling positions**: Place staples (typically using α-methyl, α-pentenylglycine residues) at i, i+4 or i, i+7 positions on the non-binding face of the helix.
+
+4. **Optimize the sequence for helicity**: Use amino acids with high helical propensity (Ala, Leu, Glu, Lys) in non-critical positions.
+
+## Proposed Sequence Design
+
+Here's a potential 50-aa stapled peptide design:
+
+```
+EAAARX5AAQLSQETFX9DLWRLLPEX5DLLEEKX9AAAALEEKIAAAIAAKIAEALARL
+```
+
+Where:
+- X5 and X9 represent the non-natural amino acids for stapling
+- The core MDM2-binding region is underlined: ETFSDLWRLLPENLLE
+- F, W, and L (bold) are the key binding residues
+- The flanking regions are designed to stabilize the helix with Ala, Leu, Glu, and Lys residues
+- Two staples are positioned at i, i+4 positions on the non-binding face
+
+## Rationale
+
+1. The key binding residues (F, W, L) are positioned to interact with MDM2's binding pockets
+2. The staples are placed on the solvent-exposed face, not interfering with binding
+3. Salt bridges (E-K pairs) are incorporated at i, i+4 positions to further stabilize the helix
+4. The N- and C-terminal extensions use high helical propensity residues to maintain structure
+
+This design approach combines structure-based rational design with principles for creating stable α-helices, following the paper's premise that functional proteins can be designed by understanding the underlying sequence-structure-function relationships.

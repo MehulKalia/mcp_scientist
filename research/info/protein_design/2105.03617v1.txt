@@ -1,0 +1,50 @@
+# Design of a 50-aa Stapled α-Helix for MDM2 Binding
+
+Based on the provided paper on MEGADOCK-GUI, I'll approach this protein design challenge by leveraging computational protein-protein docking principles to design an effective MDM2-binding stapled peptide.
+
+## Background Analysis
+
+MDM2 is a negative regulator of the p53 tumor suppressor, and disrupting the MDM2-p53 interaction is a validated therapeutic approach for cancer treatment. Stapled α-helices can mimic the MDM2-binding region of p53, providing enhanced stability and cell penetration compared to unmodified peptides.
+
+## Design Strategy
+
+1. **Base Sequence Design**: Begin with the p53 helical region that naturally binds to MDM2 (residues 15-29), which contains the critical triad of F19, W23, and L26 that insert into MDM2's hydrophobic cleft.
+
+2. **Extension to 50-aa**: Extend the core binding sequence with stabilizing helical elements while maintaining the binding interface.
+
+3. **Staple Positions**: Position hydrocarbon staples to:
+   - Reinforce the α-helical structure
+   - Not interfere with the key binding residues
+   - Connect i, i+4 or i, i+7 positions on the non-binding face of the helix
+
+## Proposed Sequence (50-aa)
+
+```
+EAELARAFKDLWAKLLDGSGRVPQYILEILKKLLKDLHEAIKKRAQTEVVR
+```
+
+Where:
+- Bold residues represent the key MDM2-binding triad (F19, W23, L26 of native p53)
+- Underlined positions indicate staple locations (to be replaced with non-natural amino acids containing olefin side chains)
+
+## Staple Positions
+
+I propose two staples at the following positions:
+1. Positions 8 and 12 (i, i+4 staple)
+2. Positions 32 and 39 (i, i+7 staple)
+
+The residues at these positions would be replaced with S5 (for i, i+4) or R8 (for i, i+7) non-natural amino acids containing olefin side chains that can be joined via ring-closing metathesis.
+
+## Rationale
+
+1. **Hydrophobic Binding Interface**: Retains the critical F, W, L residues that insert into MDM2's binding pocket.
+
+2. **Helicity Enhancement**: Includes helix-favoring residues (A, L, E, K) throughout the sequence.
+
+3. **Charge Distribution**: Positions charged residues (E, K, R) to form salt bridges that stabilize the helix.
+
+4. **Staple Placement**: Places staples on the solvent-exposed face of the helix, opposite the MDM2-binding interface.
+
+5. **N- and C-terminal Capping**: Uses helix-capping motifs to stabilize the termini.
+
+This design creates a highly stable, extended helical peptide that should maintain the critical binding interactions with MDM2 while exhibiting enhanced pharmacological properties compared to unmodified peptides.

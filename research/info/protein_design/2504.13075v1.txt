@@ -1,0 +1,29 @@
+I'll help you design a stapled α-helix peptide that binds to MDM2, based on the principles described in the paper you shared.
+
+Based on the information in the APM (All-Atom Protein Generative Model) paper, I can design a stapled α-helix peptide targeting MDM2. MDM2 is a critical negative regulator of the p53 tumor suppressor, making it an important cancer therapeutic target.
+
+# 50-aa Stapled α-Helix Design for MDM2 Binding
+
+## Design Strategy:
+1. **Binding Interface:** Focus on the key MDM2 binding pocket that normally interacts with p53
+2. **Core Binding Motif:** Incorporate the critical F-W-L triad (Phe, Trp, Leu) known to be essential for MDM2 binding
+3. **Staple Position:** Place hydrocarbon staples to reinforce the α-helical structure without disrupting key binding residues
+4. **Solubility Elements:** Add charged residues on the solvent-exposed face to enhance solubility
+5. **Length Optimization:** Extend beyond the minimal binding region to achieve 50-aa length while maintaining structural integrity
+
+## Proposed Sequence:
+```
+ACEELFDSFWLTLSDAAEQAKRILAAKAARAARAEELLRAAHRALAAKLRQK
+  |---------S---------| |------------S------------|
+```
+
+Where S indicates the positions of the staple pairs (i+4 spacing)
+
+## Key Features:
+- **Core Binding Region:** The N-terminal region contains the F-W-L motif critical for MDM2 binding
+- **Stapling Strategy:** Two staples positioned to reinforce helicity without interfering with binding interface
+- **Charged Residues:** Strategic placement of Arg, Lys, Glu, and Asp residues to enhance solubility
+- **Terminal Caps:** Acetylated N-terminus (Ace) to stabilize the helix
+- **Structural Elements:** Helix-promoting residues (Ala) in non-critical positions
+
+This design leverages APM's ability to model all-atom protein complexes, particularly its capability in modeling inter-chain interactions at the atom level, which is crucial for designing stapled peptides that maintain proper binding orientation with their target protein.

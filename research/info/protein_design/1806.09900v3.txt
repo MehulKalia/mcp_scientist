@@ -1,0 +1,58 @@
+# Designing a 50-aa Stapled α-Helix that Binds MDM2
+
+Based on the provided paper on variational autoencoders for protein design, I'll develop a strategy for designing a 50-amino acid stapled α-helix that could bind to MDM2.
+
+## Background Context
+
+MDM2 is mentioned in the paper as a protein that was investigated for metal binding site addition. The SWIB domain of human MDM2 was used as a test case because it's not known to bind metal ions naturally. Since we're now interested in designing a peptide that binds to MDM2 (rather than modifying MDM2 itself), we need to consider what's known about MDM2 binding interactions.
+
+## Design Strategy
+
+1. **Binding Interface Analysis**: 
+   MDM2 is known to bind p53 via a well-characterized interaction where three key hydrophobic residues (Phe19, Trp23, and Leu26) of p53 insert into a hydrophobic cleft on MDM2.
+
+2. **Core Structure**:
+   - Design a 50-aa peptide with high α-helical propensity
+   - Include the key binding residues in positions that will face the MDM2 binding pocket
+   - Add stapling sites at positions that face away from the binding interface
+
+3. **Staple Positioning**:
+   - Place staples at i, i+4 or i, i+7 positions to stabilize the α-helix
+   - Use positions that are on the opposite face from the binding interface
+   - Typical stapling residues are non-natural amino acids like (S)-pentenylalanine
+
+## Proposed Sequence Design
+
+```
+XEAFXDLWKLLPENLLQSEDLVKDVYRPCVIVDGKWKLLKKFLDGIAYX
+```
+
+Where:
+- X represents stapling residues ((S)-pentenylalanine)
+- The central region (DLWKLLP) contains key MDM2-binding residues
+- Surrounding residues are selected for α-helical propensity
+- Charged residues (E, D, K, R) are positioned to enhance solubility
+- Hydrophobic residues facing the binding pocket match the hydrophobic cleft of MDM2
+
+## Optimization Approach
+
+Using the variational autoencoder (VAE) approach described in the paper:
+
+1. Train the VAE model on a dataset of known α-helical peptides and MDM2-binding sequences
+2. Condition the model on MDM2 binding
+3. Generate multiple candidate sequences
+4. Use the iterative sampling-analysis-sampling approach described in the paper to refine the sequences
+5. Evaluate candidates based on:
+   - Predicted binding affinity to MDM2
+   - Helical propensity
+   - Compatibility with stapling chemistry
+   - Stability in solution
+
+## Validation Plan
+
+1. Computational validation through molecular dynamics simulations (as used in the paper)
+2. Circular dichroism spectroscopy to confirm α-helical structure
+3. Binding assays (fluorescence polarization, ITC) to measure affinity for MDM2
+4. Crystallography to confirm binding mode
+
+This design approach leverages the computational methods described in the paper while incorporating specific domain knowledge about MDM2-peptide interactions and stapled peptide design principles.

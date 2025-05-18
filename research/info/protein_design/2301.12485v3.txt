@@ -1,0 +1,56 @@
+# Design Strategy for MDM2-Binding Stapled α-Helix
+
+Based on the paper "Generating Novel, Designable, and Diverse Protein Structures by Equivariantly Diffusing Oriented Residue Clouds," I can propose a strategy for designing a 50-amino acid stapled α-helix that binds to MDM2.
+
+## Background
+
+MDM2 is a negative regulator of the tumor suppressor p53. The p53-MDM2 interaction occurs via a helical region of p53 that binds to a hydrophobic cleft in MDM2. Stapled α-helices are peptides with hydrocarbon crosslinks (staples) that reinforce the helical structure, increasing stability, protease resistance, and cellular penetration.
+
+## Design Approach
+
+I would use Genie, the generative model described in the paper, as the foundational tool for this design:
+
+1. **Initial Structure Generation**:
+   - Use Genie to generate diverse α-helical backbone structures with appropriate length
+   - Filter for structures with high designability (scRMSD < 2 and pLDDT > 70)
+   - Focus on structures that can accommodate the MDM2-binding interface
+
+2. **Key Residue Placement**:
+   - Incorporate critical MDM2-binding residues (Phe19, Trp23, Leu26 from p53) at positions that would form the interaction interface
+   - These hydrophobic residues should be positioned along one face of the helix
+
+3. **Staple Positioning**:
+   - Place staple anchors (typically unnatural amino acids like pentenyl alanine) at positions i and i+4 or i and i+7 to span one or two helical turns
+   - Position staples on the opposite face from the MDM2-binding interface to avoid interference
+   - Include 2-3 staples for a 50-aa helix to ensure stability
+
+4. **Sequence Optimization**:
+   - Use ProteinMPNN to design the remaining sequence positions
+   - Ensure high helical propensity (incorporate Ala, Leu, Arg, Glu)
+   - Include salt bridges (i, i+4 Glu-Lys pairs) to further stabilize the helix
+   - Add solubility-enhancing residues on non-interface surfaces
+
+5. **Validation**:
+   - Verify designability using self-consistency metrics as described in the paper
+   - Check the designs with structure prediction tools like ESMFold or AlphaFold
+   - Evaluate interface complementarity with MDM2 using protein-protein docking
+
+## Advantages of the Genie Approach
+
+The paper shows that Genie produces protein structures that are:
+1. **Highly designable** - 58.3% of domains were confidently designable
+2. **Structurally diverse** - spanning various types of secondary structure arrangements
+3. **Novel** - 21.5% of designable structures were novel compared to training data
+
+This makes it ideal for designing a stapled peptide that might require subtle structural features beyond standard α-helical geometry to optimize MDM2 binding.
+
+## Implementation Timeline
+
+1. Generate candidate backbones using Genie
+2. Screen for helical structures with appropriate geometry
+3. Position key interface and staple residues
+4. Design full sequence using ProteinMPNN
+5. Validate structure and binding potential through computational methods
+6. Synthesize and experimentally test top candidates
+
+This approach leverages the strengths of Genie's designable structure generation while incorporating domain knowledge about MDM2-peptide interactions and stapled peptide design principles.

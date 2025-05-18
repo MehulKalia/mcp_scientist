@@ -1,0 +1,35 @@
+As a protein design researcher, I'll design a stapled α-helical peptide that can effectively bind to the MDM2 protein, which is a promising therapeutic target for cancer treatment due to its role in p53 suppression.
+
+## Background Analysis
+
+MDM2 binds to the transactivation domain of p53 via a well-characterized hydrophobic cleft. The p53 helix that binds to MDM2 has three critical residues (F19, W23, L26) that insert into hydrophobic pockets on MDM2. This interaction has been extensively studied for cancer therapy development.
+
+## Design Strategy for a Stapled α-Helix MDM2 Inhibitor
+
+Based on the paper "HelixProtX," I'll leverage principles of protein design to create a stapled peptide:
+
+1. **Sequence Length**: 50 amino acids with a central MDM2-binding helical region
+2. **Stapling Strategy**: Incorporate two non-natural amino acids (e.g., pentenyl alanine) at i, i+4 positions to stabilize the helical conformation
+3. **Core Binding Sequence**: Maintain critical hydrophobic residues that mimic p53
+
+## Proposed Peptide Design:
+
+```
+GSMDEFKQLWNLLSSQIYAGPTSRXEYWAXLLSLENFVRVGVQERLDSFSELRRL
+```
+
+Where:
+- X represents non-natural amino acids for stapling (pentenylalanine)
+- The central region (EYWAXLLSLEN) contains the critical binding motif with W and L residues positioned to interact with MDM2 pockets
+- Flanking regions are designed to enhance solubility and stability
+- N-terminal GSM provides a flexible linker
+- C-terminal region enhances helicity
+
+## Design Rationale:
+
+1. The staple is positioned to stabilize the helical conformation without interfering with the binding interface
+2. Key hydrophobic residues (W, L, F) are positioned to mimic the p53-MDM2 interaction
+3. Charged residues are incorporated to enhance solubility
+4. The 50-aa length provides sufficient structural context for the helical region
+
+This design combines principles from successful stapled peptides like ALRN-6924 (in clinical trials) with structural insights from the MDM2-p53 interaction, offering a promising starting point for experimental validation and optimization.

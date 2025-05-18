@@ -1,0 +1,38 @@
+# Designing a 50‑aa Stapled α‑Helix for MDM2 Binding
+
+Based on the SurfPro paper you shared, I'll design a stapled α-helical peptide that can bind to MDM2, a key protein involved in regulating p53.
+
+## Key Design Considerations
+
+1. **Functional Requirement**: The peptide needs to bind the p53-binding pocket of MDM2
+2. **Structural Requirement**: A stable α-helix with appropriate stapling
+3. **Surface Properties**: Biochemical features (hydrophobicity, charge) must complement MDM2's binding surface
+4. **Length**: 50 amino acids as specified
+
+## Design Strategy
+
+The MDM2 binding site recognizes a specific region of p53 (residues 15-29) that forms an α-helix upon binding. The critical residues for this interaction are F19, W23, and L26 from p53, which insert into hydrophobic pockets on MDM2's surface.
+
+My design will:
+1. Incorporate the key binding residues from p53
+2. Extend to 50 residues with stabilizing elements
+3. Include hydrocarbon staple positions (i,i+4 spacing for α-helix stabilization)
+4. Optimize surface complementarity to MDM2
+
+## Proposed Sequence
+
+```
+AEQWTSFTAEQLRRLIEAAQLSQETFSDLWKLLRENARQVPDAARAVDEFLNE
+```
+
+### Design Breakdown:
+
+- **Core MDM2-binding region** (underlined): SQETF**F**DLW**W**LL**L**EN - modified from p53's binding sequence with the key hydrophobic residues (F, W, L) preserved
+- **Stapling positions**: Paired positions for introducing olefin crosslinks (i, i+4): 
+  - Positions 7-11 (T-L): First staple
+  - Positions 29-33 (L-N): Second staple
+- **Helix-promoting residues**: Alanine, glutamate, and leucine are placed strategically throughout to promote helical structure
+- **Terminal capping**: N-terminal Ala-Glu sequence and C-terminal Asn-Glu to stabilize the helix ends
+- **Solubility elements**: Charged residues (E, D, R, K) distributed to maintain solubility
+
+This design leverages key principles from SurfPro by considering both geometric structure (α-helical conformation) and biochemical properties (hydrophobicity and charge distribution) that are critical for protein-protein interactions. The stapling strategy will help maintain the helical structure required for MDM2 binding.

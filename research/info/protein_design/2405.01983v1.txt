@@ -1,0 +1,71 @@
+# Protein Design Strategy for a Stapled α-Helix that Binds MDM2
+
+Based on the research paper you shared on model-based reinforcement learning for protein backbone design, I'll develop a comprehensive strategy to design a 50-amino acid stapled α-helix that effectively binds to MDM2.
+
+## Understanding the Design Challenge
+
+MDM2 is a negative regulator of the p53 tumor suppressor, making it an important target for cancer therapeutics. The binding interaction between p53 and MDM2 occurs primarily through an α-helical region of p53, which suggests that a stapled α-helix mimetic could be an effective inhibitor.
+
+## Design Approach Using Model-Based Reinforcement Learning
+
+The paper describes using AlphaZero, a model-based reinforcement learning algorithm, for protein backbone design. This approach is particularly suitable for our task as it can efficiently explore the protein fitness landscape to identify optimal designs.
+
+### Key Elements of the Design Strategy:
+
+1. **Initial Structure Formation**:
+   - Begin with a core α-helix of approximately 15-20 residues that mimics the MDM2-binding region of p53
+   - The key residues in p53 that interact with MDM2 are Phe19, Trp23, and Leu26
+   - Position these critical residues on the same face of the helix
+
+2. **Staple Placement**:
+   - Introduce non-natural amino acids with olefin side chains at positions i and i+4 or i and i+7
+   - Ensure staples are positioned on the face opposite to the MDM2-binding interface
+   - Optimal positions would be roughly at residues 5-9 and 30-34 of our 50-aa peptide
+
+3. **Extension of the Helix**:
+   - Use the AlphaZero approach to optimize the remaining residues
+   - Apply the threshold-based reward function described in the paper to evaluate designs
+   - Focus on scores for:
+     - Core formation (hydrophobic core)
+     - Helix stability
+     - Monomer designability
+     - Interface designability for MDM2 interaction
+
+4. **Terminal Regions**:
+   - Design capping regions at both N and C termini to stabilize the helix
+   - Consider adding short loops at the termini to improve solubility and reduce aggregation
+
+### Implementation Plan:
+
+1. **Initial Training**:
+   - Train the AlphaZero model using the threshold reward function described in the paper
+   - Use known p53-MDM2 binding data as initial constraints
+
+2. **Amino Acid Selection**:
+   - Core binding interface: Phe, Trp, Leu at key positions (mirroring p53)
+   - Staple positions: non-natural amino acids with olefin side chains
+   - Helix-promoting residues: Ala, Leu, Glu, Lys for remaining helical portions
+   - Terminal caps: Pro, Gly at appropriate positions to stabilize helix ends
+
+3. **Structural Optimization**:
+   - Optimize using the five scores mentioned in the paper:
+     - Core score
+     - Helix score
+     - Porosity score
+     - Monomer designability score
+     - Interface designability score
+
+4. **Validation**:
+   - Use AlphaFold or similar tools to predict the structure of designed sequences
+   - Compare predicted binding to known p53-MDM2 interaction structures
+
+## Proposed Sequence Design
+
+A conceptual 50-aa design would follow this pattern:
+```
+[N-cap(5aa)]-[Helix1(10aa)]-[Staple1]-[Core binding region(15aa)]-[Staple2]-[Helix2(10aa)]-[C-cap(5aa)]
+```
+
+The core binding region would include key hydrophobic residues (Phe, Trp, Leu) positioned to interface with MDM2's binding pocket, while the remaining portions would be optimized for helix stability and overall structural integrity.
+
+This approach leverages the power of model-based reinforcement learning described in the paper to efficiently explore the vast design space and identify optimal protein backbones that meet both structural and functional requirements.
